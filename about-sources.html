@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About & Data</title>
+    <link rel="icon" href="???.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Serif Display"> <!-- h1 & h2 fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant"> <!-- body text fonts -->
+    <link rel="stylesheet" href="calibri-font.css"> <!--Calibri Font-->
+
+    <!-- Background Color-->
+    <style>
+        html {
+            background-color: #faf5ed;
+            /*background-color: #FFF5E1*/
+            /*background-color:#d7d1d7;*/
+        } 
+
+        main {
+            background-color: #faf5ed;
+            color:#342a4e;
+        }
+
+        footer {
+            background-color: #342a4e;
+            color:#faf5ed;
+        }
+
+    </style>
+
+    <!-- Tab Navigation -->
+    <style>
+        div#navigation {
+            background-color: #3f3656;
+            padding-top:1.5rem;
+            position: sticky;
+            top: 0;
+        }
+
+        div#navigation li {
+            font-size: 19px;
+            font-family: "Assistant";
+            text-transform: uppercase;
+        }
+
+        div#navigation li:hover{
+            background-color: #81779a;
+            opacity: 0.8;
+        }
+
+        .tabs ul {
+            align-items: center;
+            border-bottom-color: #faf5ed;
+            border-bottom-style: solid;
+            border-bottom-width: 0.5px;
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 0;
+            justify-content: flex-start;
+        }
+
+        /* Customize nav text properties */
+        div#navigation.tabs a {
+            align-items: center;
+            border-bottom-color: #faf5ed;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            color: #faf5ed;
+            display: flex;
+            justify-content: center;
+            margin-bottom: -1px;
+            padding: 0.5em 1em;
+            vertical-align: top;
+        }
+            
+    </style>
+
+    <!-- General Setting -->
+    <style>
+        /* Body */
+        section {
+            max-width: 80rem;
+            margin: 0 auto ;
+            padding: 0 0.75rem;
+        }
+
+        /* not activated */
+        div.h2-wrapper {
+            max-width: 43rem; 
+            margin:1.3rem auto;
+            padding-top: 2rem;
+        }
+
+        /* h2 */
+        h2 {
+            text-align: center;
+            font-size: 20px;
+            line-height: 1.6;
+            font-weight: 500;
+            color:#342a4e;
+            font-family:"DM Serif Display";
+            
+        }
+        @media only screen and (min-width: 40em){
+            h2 {
+            font-size: 30px;
+            }
+        }
+    
+        /* p */
+        p {
+            margin: 1.5rem 0;
+            font-size: 17px;
+            line-height: 1.7;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+    
+            font-family: "Assistant";
+            font-weight: 500;
+        }
+        
+        @media only screen and (min-width: 40em){
+            p {
+            font-size: 19px;
+            line-height: 1.7;
+            padding-left: 0;
+            padding-right: 0; 
+    
+            /* center everything about the text👇*/
+            margin-top: 1.5rem;
+            margin-right: auto;
+            margin-bottom: 1.5rem;
+            margin-left: auto;
+            }
+        }
+    </style>
+
+    <!-- Section: About -->
+    <style>
+    p.about-writing {
+        margin-top: 1.5rem;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+        margin-left: auto;
+        max-width: 32rem; 
+
+        font-family: "Assistant";
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    #about-this-project p.about-writing a {
+        color:#a18dd8;
+        cursor: pointer;
+    }
+
+    p.about-writing a:hover {
+        color:#342a4e;
+        border-bottom: 1px solid #342a4e;
+    }
+    </style>
+
+    <!-- Section: Data -->
+    <style>
+
+    p.data-statement {
+        margin-top: 1.5rem;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+        margin-left: auto;
+        max-width: 32rem;   
+        
+        font-size:18px;
+    }
+
+    p.data-statement a {
+        color:#a18dd8;
+        cursor: pointer;
+    }
+
+    p.data-statement a:hover {
+        color:#a18dd8;
+        cursor: pointer;
+        border-bottom: 1px solid #faf5ed;
+    }
+
+    p.data-writing {
+        margin-top: 1.5rem;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+        margin-left: auto;
+        max-width: 32rem;   
+        
+        font-size:16px;
+    }
+
+    p.data-writing span {
+        padding-top:0.2rem;
+        padding-bottom:0.2rem;
+        padding-right:0.5rem;
+        padding-left:0.5rem;
+        background-color: #faf5ed;
+        color: #342a4e;
+    }
+    
+    p.data-writing a {
+        color:#faf5ed;
+        cursor: pointer;
+        border-bottom: 1px solid #faf5ed;
+    }
+    
+    p.data-writing a:hover{
+        color:#a18dd8;
+        cursor: pointer;
+    }
+
+    p#closingTag {
+        color:#faf5ed; 
+        text-align: center;
+        letter-spacing: 1px; 
+        margin-top: -0.5rem; 
+    }
+
+    </style>
+</head>
+
+<body>	 
+    <main id="content">
+        <div id="navigation" class="tabs is-centered">
+            <ul>
+            <li><a href="#about-this-project">About This Project</a></li>
+            <li><a href="#datasets-and-sources">Datasets and Sources</a></li>
+            <li class="is-active"><a href="url">Back To Story</a></li>
+            </ul>
+        </div>
+        <section id="about-this-project">
+            <div class="h2-wrapper"><h2>About This Project</h2></div>
+            <p class="about-writing">
+                Thank you for visiting my capstone project for the Journalism Graduate Program at the <a href="https://com.miami.edu/journalism-ma/">University of Miami</a>. The goal of this story is to understand the potential financial predicament arose from the end of Roe that women may risk undergoing. The statistics in the story may depict a less severe situation in Florida than other Southern states. However, the state's Supreme Court has been considered to become more conservative with three of the seven judges appointed by the Republican governor. We don't know what may happen in the future. We don't know whether Florida's 15-week ban is a prelude to a more restrictive legislation on the way. If the purple state turns red, what women in Florida can access now may become inaccessible; what currently women can afford may become unaffordable. Being labeled as a "HAVEN" state for abortion shouldn't be deemed as a compliment. The opposition to abortion is running strong almost in every corner across the country and none of woman shall distance themselves from this important movement.
+            </p>
+            <p class="about-writing">
+                The idea of using data to expose hidden gender issues isn't born overnight. As a woman who grew up in a patriarchal society in Southeast Asia, the ability to spot gender problems and maintain sensitivity to women rights has grown silently but resolutely throughout my adulthood. When I was covering the story, I was assuming myself as a young lady who was seeking abortion but with limited budget. The first two things beyond the procedure that came to me were: how far I should travel and how much I should pay for — either for gas or hotels if I were in Florida. Most coverage on abortion issues published by many big news outlets focuses on a nationwide situation, but even though some may include detailed statistics by state, clean and updated regional data aren't usually accessible on national public databases. In this case, I am prompted to build my own datasets from scratch in terms of abortion access particularly in Florida. This project is also trying to deliver informative messages to people who need help with selection of abortion care in the particular region.
+            </p>
+            <p class="about-writing">
+                This project would not have been possible without the dedicated support of my capstone committee. Thank all good advice and warm tips provided by <a href="https://albertocairo.com/">Alberto Cairo</a>, <a href="https://vsueiro.com/">Vinicius Sueiro</a>, <a href="https://www.lmelgar.me/">Luis Melgar</a> and <a href="https://com.miami.edu/profile/trevor-green/">Trevor Green</a>. They guided me throughout the process and encouraged me to pursue my best self.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <section id="datasets-and-sources">
+            <div class="h2-wrapper"><h2 style="color:#faf5ed"> Datasets and Sources</h2></div>
+            <p class="data-statement">
+                Most of the data that you've read about in the story were collected and processed by me. I also used statstics that were calculated and published by the government and non-profit organizations. In case you would like to check my data, I am listing the major sources as below :
+                <br>
+            </p>
+            <p class="data-writing">
+                <b><span>･ The Datasets I built</span></b><br>
+                → <a href="https://docs.google.com/spreadsheets/d/1tHO3c5zESVwZd0TfVqlZ75N-ABphq_G2Wd1l8fha9lI/edit?usp=sharing">Florida Abortion Facility Dataset (Restricted)</a><br>
+                → <a href="https://docs.google.com/spreadsheets/d/1as-PY2Fs-1FnRqoFcjAXEBnXkGaDjx_4ODd32I5OnaU/edit?usp=sharing">Florida: Geodesic Distance To The Nearest Abortion Facility By County</a><br>
+                → <a href="https://docs.google.com/spreadsheets/d/1_l8XXcSSV_XPgWTZmiOtwCt7wROci5WNXu9RkBgqLag/edit?usp=sharing">Florida: Lodging Costs for Each Abortion Facility</a> <br>
+            </p>
+            <p class="data-writing">
+                <b><span>･ Florida Agency for Health Care Administration (AHCA)</span></b><br>
+                → <a href="https://ahca.myflorida.com/MCHQ/Central_Services/Training_Support/docs/TotalsByCounty_2020.pdf">2020</a> / <a href="https://ahca.myflorida.com/MCHQ/Central_Services/Training_Support/docs/TotalsByCounty_2021.pdf">2021</a> / <a href="https://ahca.myflorida.com/MCHQ/Central_Services/Training_Support/docs/TotalsByCounty_2022.pdf">2022</a> Reported Induced Terminations of Pregnancy (ITOP) - Total Cases by Patient County of Residence <br>
+                → <a href="https://ahca.myflorida.com/MCHQ/Health_Facility_Regulation/Hospital_Outpatient/reports/Abortion_Report_2019_Regulatory_Actions.pdf">2019</a> / <a href="https://ahca.myflorida.com/MCHQ/Health_Facility_Regulation/Hospital_Outpatient/reports/Abortion_Report_2020_Regulatory_Actions.pdf">2020</a> / <a href="https://ahca.myflorida.com/MCHQ/Health_Facility_Regulation/Hospital_Outpatient/reports/Abortion_Report_2021_Regulatory_Actions.pdf">2021</a> Florida Regulatory Actions for Abortion Clinics             
+            </p>
+            <p class="data-writing">
+                <b><span>･ The Florida Department of Health (DOH)</span></b><br>
+                → The DOH provides the data of Pregnancy and Young Child Profile by county and defines <a href="https://www.flhealthcharts.gov/ChartsDashboards/rdPage.aspx?rdReport=PregnancyandYoungChild.Report">women's childbearing age as 15 to 44.</a><br>
+                → The DOH also defines <a href="https://www.floridahealth.gov/diseases-and-conditions/aids/adap/_documents/2020FPL.pdf">2020 federal poverty level </a> by annual income and monthly income.<br>
+            </p>
+            <p class="data-writing">
+                <b><span>･ Guttmacher Institute</span></b><br>
+                →  Guttmacher Institute displays <a href="https://www.guttmacher.org/evidence-you-can-use/medicaid-coverage-abortion">the average and median costs of an abortion without insurance coverage</a> at different weeks of pregnancy in 2014.<br>
+                →  Guttmacher Institute also archives the data of <a href="https://www.guttmacher.org/state-policy/explore/state-funding-abortion-under-medicaid">state funding of abortion under Medicaid</a>.<br>
+
+            </p>
+            <p class="data-writing">
+                <b><span>･ Kaiser Family Foundation (KFF) </span></b><br>
+                →  KFF publishs the data of <a href="https://www.kff.org/other/state-indicator/adult-poverty-rate-by-sex/?dataView=1&currentTimeframe=0&selectedDistributions=male--female--total&selectedRows=%7B%22states%22:%7B%22florida%22:%7B%7D%7D%7D&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D">Nonelderly Adult Poverty Rate by Sex</a> on a yearly basis. They also releases estimates based on the raw data by the Census Bureau's American Community Survey (ACS).<br>
+            </p>
+            <p class="data-writing" style="display:none">
+                <b><span>･ WelfareInfo.org </span></b><br>
+                →  WelfareInfo.org records <a href="https://www.welfareinfo.org/poverty-rate/florida/">Florida's poverty rate by gender</a>.<br>
+            </p>
+            <p class="data-writing">
+                <b><span>･ Benefits.gov</span></b><br>
+                →  Benefits.gov defines <a href="https://www.benefits.gov/benefit/1625">Florida Medicaid</a> and the annual household income ceiling (before taxes) for the insurance eligibility.
+            </p>
+            <p class="data-statement">
+                If you are looking for data sources such as the regional datasets that I built for this story, please feel free to contact me. You can find me at <a href="https://luyi-eve.github.io/">here</a>.
+            </p>
+            <hr style="max-width: 32rem; margin-top:2rem; margin-bottom:1rem;margin-left:auto; margin-right:auto;border: none;height: 1px; opacity: 0.5;">
+            <p id="closingTag">
+                <br>
+                Yi (Eve) Lu | Journalism | University of Miami | 2022
+            </p>
+            <br>
+        </section>
+    </footer>
+</body>
+
+<style>
+    
+</style>
+    
+</html>
+
+
