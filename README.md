@@ -7,17 +7,11 @@
 
 The overall goal of this project is to understand the potential financial predicament arose from the end of Roe that women may risk undergoing through a deep analysis of the nonmedical costs on transportation and lodging expenses for an abortion round trip in Florida. It also tries to deliver informative messages to people who need help with selection of abortion care in the particular region. 
 
-## Datasets and Sources
+## Data and Methodology
 
-Most coverage on abortion issues published by many big news outlets focuses on a nationwide situation, but even though some may include detailed statistics by state, clean and updated regional data aren't usually accessible on national public databases. In light of this, I am prompted to build my own datasets from scratch in terms of abortion access particularly in Florida. 
+Most coverage on abortion issues published by many big news outlets focuses on a nationwide situation, but even though some may include detailed statistics by state, clean and updated regional data aren't usually accessible on national public databases. In light of this, I am prompted to build my own datasets from scratch in terms of abortion access particularly in Florida. Thereby, most data that you've read about in the story were collected and analyzed by me. I also used related statstics and information processed and published by the government and non-profit organizations. 
 
-Most data that you've read about in the story were collected and analyzed by me. I also used related statstics and information processed and published by the government and non-profit organizations. If you're interested in the datasets that I built for this story and other sources I cited, please visit [here](https://luyi-eve.github.io/fl-abortion-costs/about-and-sources#datasets-and-sources) for more exploration.
-
-## Methodology
-
-If you would like to further explore how I collected the data to built my own datasets, my [methodology]() for this story contains the approaches of data collection and analysis section by section.
-
-
+If you want to check the datasets that I built for this story and other sources I cited, you can visit [Datasets and Sources](https://luyi-eve.github.io/fl-abortion-costs/about-and-sources#datasets-and-sources) to further explore. If you're interested in reading more about how I collected the data to built my own datasets, the [methodology]() contains multiple step-by-step approaches of data collection and analysis of mine.
 
 
 ## Skills and Tools
