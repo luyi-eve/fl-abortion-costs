@@ -10,7 +10,7 @@ The overall goal of this project is to understand the potential financial predic
 
 Most coverage on abortion issues published by many big news outlets focuses on a nationwide situation, but even though some may include detailed statistics by state, clean and updated regional data aren't usually accessible on national public databases. In light of this, I am prompted to build my own datasets from scratch in terms of abortion access particularly in Florida. Thereby, most data that you've read about in the story were collected and analyzed by me. I also used related statstics and information processed and published by the government and non-profit organizations. 
 
-If you want to check the datasets that I built for this story and other sources I cited, you can visit [Datasets and Sources](https://luyi-eve.github.io/fl-abortion-costs/about-and-sources#datasets-and-sources) to further explore. If you're interested in reading more about how I collected the data to built my own datasets, the [methodology]() contains multiple step-by-step approaches of data collection and analysis of mine.
+If you want to check the datasets that I built for this story and other sources I cited, you can visit [Datasets and Sources](https://luyi-eve.github.io/fl-abortion-costs/about-and-sources#datasets-and-sources) to further explore. If you're interested in reading more about how I collected the data to built my own datasets, the [methodology](https://luyi-eve.github.io/fl-abortion-costs/#methodology) contains multiple step-by-step approaches of data collection and analysis of mine.
 
 
 ## Skills and Tools
