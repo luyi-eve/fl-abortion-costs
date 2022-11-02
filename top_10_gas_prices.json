@@ -1,0 +1,52 @@
+[
+  {
+    "county": "Escambia",
+    "distance_to_nearest": 362.12,
+    "gas_price": 47.8
+  },
+  {
+    "county": "Santa Rosa",
+    "distance_to_nearest": 321.41,
+    "gas_price": 42.43
+  },
+  {
+    "county": "Okaloosa",
+    "distance_to_nearest": 271.22,
+    "gas_price": 35.8
+  },
+  {
+    "county": "Walton",
+    "distance_to_nearest": 219.1,
+    "gas_price": 28.92
+  },
+  {
+    "county": "Holmes",
+    "distance_to_nearest": 184.67,
+    "gas_price": 24.38
+  },
+  {
+    "county": "Washington",
+    "distance_to_nearest": 159.61,
+    "gas_price": 21.07
+  },
+  {
+    "county": "Bay",
+    "distance_to_nearest": 154.04,
+    "gas_price": 20.33
+  },
+  {
+    "county": "Hamilton",
+    "distance_to_nearest": 134.96,
+    "gas_price": 17.81
+  },
+  {
+    "county": "Gulf",
+    "distance_to_nearest": 126.5,
+    "gas_price": 16.7
+  },
+  {
+    "county": "Highlands",
+    "distance_to_nearest": 116.44,
+    "gas_price": 15.37
+  }
+]

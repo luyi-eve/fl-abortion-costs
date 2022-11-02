@@ -522,6 +522,15 @@
         }
     </style>
 
+    <!--Graphic 05: gas prices chart -->
+    <style>
+        /* add hover effect */
+        svg#top_10_gas_price g#dots path:hover {
+            cursor:pointer;
+        }
+        
+    </style>
+
     <!--Graphic 06: lodging costs filter (interactive)-->
     <style>
     /* p - caption */
@@ -554,23 +563,8 @@
 
     <!--Customized tooltips here-->
     <style>
-         /* graphic 01 */
-        #tooltip01 {
-            background: cornsilk;
-            border: 0.8px solid black;
-            border-radius: 5px;
-            padding: 10px;
-        }
-
-        #tooltip02 {
-            background: cornsilk;
-            border: 0.8px solid black;
-            border-radius: 5px;
-            padding: 10px;
-        }
-
-         /* graphic 04 */
-        #tooltip04 {
+         /* graphic 01 & graphic 04 & graphic 05 */
+        #tooltip01, #tooltip02, #tooltip04, #tooltip05 {
             background: cornsilk;
             border: 0.8px solid black;
             border-radius: 5px;
@@ -2677,7 +2671,7 @@
                 <b>To quantify access to the facility by measuring what people really care about: how far it takes to drive there and how much should be paid for gas.</b> Let's start by looking at the distance to the nearest clinic for different counties in Florida.
             </p>
             <div id="graphic04" class="graphicWizHover" style="max-width: 30rem;">
-                <div id="tooltip04" display="none" style="position: absolute; display: none;"></div>
+                <div id="tooltip04" style="position: absolute; display: none;"></div>
                 <svg id="fl_distance_map"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1109.63 1104.31">
                     <path id="Hardee-svg" d="M805.59,578.71l72.92-.45,.3,51.3-43.96,.33-29.31,.47,.05-51.64Z" style="fill:#9e9ac8; stroke:#fff; stroke-miterlimit:10; stroke-width:1.5px;"/>
@@ -2807,7 +2801,7 @@
                         .then(response => response.json())
                         .then(data => {
                             distanceToNearest = data
-                            console.log(distanceToNearest)
+                            //console.log(distanceToNearest)
                         })
 
                     function showTooltip04(event, text) {
@@ -2861,7 +2855,8 @@
                 <b>To get to its nearest facility in Tallahassee, patients in Escambia need to travel about 362 miles for a round trip across 13 counties all the way down to Leon where only two facilities are detected.</b> Possible gas fees and extra lodging costs shall be taken into account if patients do not wish to return and make the same 4-hour trip again as 24 hours between the first counseling and the actual procedure are mandated by Florida's law.        
             </p>
             <div id="graphic05" class="graphic" style="max-width: 30rem;">
-                <svg id="top-10-gas-price"
+                <div id="tooltip05" style="position: absolute; display: none;"></div>
+                <svg id="top_10_gas_price"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1072.59 1027.61">
                     <g id="grid">
                         <line x1="80.05" y1="852.75" x2="80.05" y2="93.25" style="fill:none; stroke:#8c8c8c;"/>
@@ -2879,36 +2874,16 @@
                         <line x1="51.91" y1="211.19" x2="1072.59" y2="211.19" style="fill:none; stroke:#8c8c8c;"/>
                     </g>
                     <g id="dots">
-                        <g id="dot-svg">
-                            <path d="M1010.4,156.54c0,12.63-10.24,22.87-22.86,22.87s-22.86-10.24-22.86-22.87,10.24-22.87,22.86-22.87,22.86,10.24,22.86,22.87" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
-                        </g>
-                        <g id="dot-svg-2">
-                            <path d="M389.73,613.62c0,9.14-7.41,16.54-16.54,16.54s-16.54-7.41-16.54-16.54,7.41-16.54,16.54-16.54,16.54,7.41,16.54,16.54" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
-                        </g>
-                        <g id="dot-svg-3">
-                            <path d="M301.87,678.22c0,8.53-6.91,15.44-15.44,15.45-8.53,0-15.44-6.91-15.44-15.44h0c0-8.53,6.91-15.45,15.44-15.45,8.53,0,15.44,6.91,15.45,15.44,0,0,0,0,0,0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
-                        </g>
-                        <g id="dot-svg-4">
-                            <path d="M282.33,692.66c0,8.39-6.8,15.19-15.18,15.19s-15.19-6.8-15.19-15.18h0c0-8.39,6.8-15.19,15.18-15.19,8.39,0,15.19,6.8,15.19,15.18h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
-                        </g>
-                        <g id="dot-svg-5">
-                            <path d="M215.36,741.84c0,7.88-6.39,14.28-14.27,14.28-7.88,0-14.28-6.39-14.28-14.27h0c0-7.89,6.39-14.28,14.27-14.28,7.88,0,14.28,6.39,14.28,14.27h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
-                        </g>
-                        <g id="dot-svg-6">
-                            <path d="M185.65,763.5c0,7.65-6.2,13.86-13.85,13.86-7.65,0-13.86-6.2-13.86-13.85h0c0-7.66,6.2-13.86,13.85-13.86,7.65,0,13.86,6.2,13.86,13.85h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
-                        </g>
-                        <g id="dot-svg-7">
-                            <path d="M150.31,789.46c0,7.36-5.97,13.34-13.33,13.34-7.36,0-13.34-5.97-13.34-13.33h0c0-7.37,5.97-13.34,13.33-13.34,7.37,0,13.34,5.97,13.34,13.33h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
-                        </g>
-                        <g id="dot-svg-8">
-                            <path d="M868.17,261.34c0,11.92-9.66,21.58-21.58,21.58s-21.58-9.66-21.58-21.58h0c0-11.92,9.66-21.58,21.58-21.58,11.92,0,21.58,9.66,21.58,21.58h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
-                        </g>
-                        <g id="dot-svg-9">
-                            <path d="M692.71,390.74c0,10.98-8.9,19.88-19.88,19.88s-19.88-8.9-19.88-19.88,8.9-19.88,19.88-19.88,19.88,8.9,19.88,19.88" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
-                        </g>
-                        <g id="dot-svg-10">
-                            <path d="M510.33,525.01c0,9.91-8.03,17.94-17.94,17.94s-17.94-8.03-17.94-17.94,8.03-17.94,17.94-17.94,17.94,8.03,17.94,17.94" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
-                        </g>
+                        <path id="Escambia" d="M1010.4,156.54c0,12.63-10.24,22.87-22.86,22.87s-22.86-10.24-22.86-22.87,10.24-22.87,22.86-22.87,22.86,10.24,22.86,22.87" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
+                        <path id="Holmes" d="M389.73,613.62c0,9.14-7.41,16.54-16.54,16.54s-16.54-7.41-16.54-16.54,7.41-16.54,16.54-16.54,16.54,7.41,16.54,16.54" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
+                        <path id="Washington" d="M301.87,678.22c0,8.53-6.91,15.44-15.44,15.45-8.53,0-15.44-6.91-15.44-15.44h0c0-8.53,6.91-15.45,15.44-15.45,8.53,0,15.44,6.91,15.45,15.44,0,0,0,0,0,0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
+                        <path id="Bay" d="M282.33,692.66c0,8.39-6.8,15.19-15.18,15.19s-15.19-6.8-15.19-15.18h0c0-8.39,6.8-15.19,15.18-15.19,8.39,0,15.19,6.8,15.19,15.18h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
+                        <path id="Hamilton" d="M215.36,741.84c0,7.88-6.39,14.28-14.27,14.28-7.88,0-14.28-6.39-14.28-14.27h0c0-7.89,6.39-14.28,14.27-14.28,7.88,0,14.28,6.39,14.28,14.27h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
+                        <path id="Gulf" d="M185.65,763.5c0,7.65-6.2,13.86-13.85,13.86-7.65,0-13.86-6.2-13.86-13.85h0c0-7.66,6.2-13.86,13.85-13.86,7.65,0,13.86,6.2,13.86,13.85h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
+                        <path id="Highlands" d="M150.31,789.46c0,7.36-5.97,13.34-13.33,13.34-7.36,0-13.34-5.97-13.34-13.33h0c0-7.37,5.97-13.34,13.33-13.34,7.37,0,13.34,5.97,13.34,13.33h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
+                        <path id="Santa Rosa" d="M868.17,261.34c0,11.92-9.66,21.58-21.58,21.58s-21.58-9.66-21.58-21.58h0c0-11.92,9.66-21.58,21.58-21.58,11.92,0,21.58,9.66,21.58,21.58h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
+                        <path id="Okaloosa" d="M692.71,390.74c0,10.98-8.9,19.88-19.88,19.88s-19.88-8.9-19.88-19.88,8.9-19.88,19.88-19.88,19.88,8.9,19.88,19.88" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
+                        <path id="Walton" d="M510.33,525.01c0,9.91-8.03,17.94-17.94,17.94s-17.94-8.03-17.94-17.94,8.03-17.94,17.94-17.94,17.94,8.03,17.94,17.94" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
                     </g>
                     <g id="number-x">
                         <line x1="51.91" y1="113.6" x2="1072.59" y2="113.6" style="fill:none; stroke:#8c8c8c;"/>
@@ -3150,7 +3125,61 @@
                         <tspan x="594.14" y="0" style="letter-spacing:0em;">r</tspan>
                         <tspan x="608.71" y="0">vice (mile)</tspan>
                     </text>
-                </svg>                
+                </svg>
+                <!-- tooltip05: gas prices -->
+                <script>
+                    let top_10_gas_prices = []
+                    let file05 = 'top_10_gas_prices.json'
+
+                    fetch(file05) 
+                        .then(response => response.json())
+                        .then(data => {
+                            top_10_gas_prices = data
+                            console.log(top_10_gas_prices)
+                        })
+
+                    function showTooltip05(event, text) {
+
+                        let template05 = 'No data' 
+
+                        for(let gas of top_10_gas_prices){
+                            //console.log(event.target.id)
+                            //console.log(gas.gas_price)
+
+                            if (gas.county == event.target.id){
+
+                                template05 = `
+                                <strong>$${gas['gas_price']}</strong>
+                                `
+                            }
+ 
+                        }
+                    
+                        let tooltip05 = document.getElementById("tooltip05");
+                            tooltip05.innerHTML = template05;
+                            tooltip05.style.display = "block";
+                            tooltip05.style.left = event.pageX + 10 + 'px';
+                            tooltip05.style.top = event.pageY + 10 + 'px';
+                        
+                        }
+
+                    let groupPrices = top_10_gas_price.querySelectorAll("path")
+                    //console.log(groupTotal)
+
+                    for (let price of groupPrices) {
+                        price.addEventListener('mousemove',showTooltip05)
+                    }
+        
+                    function hideTooltip05() {
+                        var tooltip05 = document.getElementById("tooltip05");
+                        tooltip05.style.display = "none";
+                    }
+
+                    for (let price of groupPrices) {
+                        price.addEventListener('mouseout',hideTooltip05)
+                    }
+
+                </script>           
             </div>      
             <p class="writing">
                 This long-distance travel from Escambia to Tallahassee, takes an estimated six to eight hours' drive for a round, which roughly costs about $50 of gas price to run the entire trip.        
