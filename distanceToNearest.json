@@ -1,0 +1,337 @@
+[
+  {
+    "county_name": "Gilchrist",
+    "distance_to_nearest": 27.91,
+    "id": "Gilchrist-svg"
+  },
+  {
+    "county_name": "Putnam",
+    "distance_to_nearest": 36,
+    "id": "Putnam-svg"
+  },
+  {
+    "county_name": "Taylor",
+    "distance_to_nearest": 47.51,
+    "id": "Taylor-svg"
+  },
+  {
+    "county_name": "Okaloosa",
+    "distance_to_nearest": 135.61,
+    "id": "Okaloosa-svg"
+  },
+  {
+    "county_name": "Calhoun",
+    "distance_to_nearest": 51.35,
+    "id": "Calhoun-svg"
+  },
+  {
+    "county_name": "Palm Beach",
+    "distance_to_nearest": 24.06,
+    "id": "Palm-Beach-svg"
+  },
+  {
+    "county_name": "St. Lucie",
+    "distance_to_nearest": 9.97,
+    "id": "St-Lucie-svg"
+  },
+  {
+    "county_name": "Pasco",
+    "distance_to_nearest": 15.74,
+    "id": "Pasco-svg"
+  },
+  {
+    "county_name": "Gadsden",
+    "distance_to_nearest": 18.68,
+    "id": "Gadsden-svg"
+  },
+  {
+    "county_name": "Leon",
+    "distance_to_nearest": 2.2,
+    "id": "Leon-svg"
+  },
+  {
+    "county_name": "Jefferson",
+    "distance_to_nearest": 20.66,
+    "id": "Jefferson-svg"
+  },
+  {
+    "county_name": "Madison",
+    "distance_to_nearest": 45.94,
+    "id": "Madison-svg"
+  },
+  {
+    "county_name": "Liberty",
+    "distance_to_nearest": 35.68,
+    "id": "Liberty-svg"
+  },
+  {
+    "county_name": "Hamilton",
+    "distance_to_nearest": 67.48,
+    "id": "Hamilton-svg"
+  },
+  {
+    "county_name": "Bay",
+    "distance_to_nearest": 77.02,
+    "id": "Bay-svg"
+  },
+  {
+    "county_name": "Columbia",
+    "distance_to_nearest": 41.56,
+    "id": "Columbia-svg"
+  },
+  {
+    "county_name": "Baker",
+    "distance_to_nearest": 39.71,
+    "id": "Baker-svg"
+  },
+  {
+    "county_name": "Holmes",
+    "distance_to_nearest": 92.34,
+    "id": "Holmes-svg"
+  },
+  {
+    "county_name": "Martin",
+    "distance_to_nearest": 17.18,
+    "id": "Martin-svg"
+  },
+  {
+    "county_name": "Hillsborough",
+    "distance_to_nearest": 8.36,
+    "id": "Hillsborough-svg"
+  },
+  {
+    "county_name": "Manatee",
+    "distance_to_nearest": 17.53,
+    "id": "Manatee-svg"
+  },
+  {
+    "county_name": "Clay",
+    "distance_to_nearest": 23.84,
+    "id": "Clay-svg"
+  },
+  {
+    "county_name": "Hardee",
+    "distance_to_nearest": 35.11,
+    "id": "Hardee-svg"
+  },
+  {
+    "county_name": "Marion",
+    "distance_to_nearest": 35.52,
+    "id": "Marion-svg"
+  },
+  {
+    "county_name": "Volusia",
+    "distance_to_nearest": 29.82,
+    "id": "Volusia-svg"
+  },
+  {
+    "county_name": "Dixie",
+    "distance_to_nearest": 49.09,
+    "id": "Dixie-svg"
+  },
+  {
+    "county_name": "Lake",
+    "distance_to_nearest": 22.18,
+    "id": "Lake-svg"
+  },
+  {
+    "county_name": "Levy",
+    "distance_to_nearest": 33.33,
+    "id": "Levy-svg"
+  },
+  {
+    "county_name": "Sumter",
+    "distance_to_nearest": 43.5,
+    "id": "Sumter-svg"
+  },
+  {
+    "county_name": "Seminole",
+    "distance_to_nearest": 8.32,
+    "id": "Seminole-svg"
+  },
+  {
+    "county_name": "Orange",
+    "distance_to_nearest": 8.3,
+    "id": "Orange-svg"
+  },
+  {
+    "county_name": "Citrus",
+    "distance_to_nearest": 52.69,
+    "id": "Citrus-svg"
+  },
+  {
+    "county_name": "Hernando",
+    "distance_to_nearest": 32.06,
+    "id": "Hernando-svg"
+  },
+  {
+    "county_name": "Pinellas",
+    "distance_to_nearest": 3.29,
+    "id": "Pinellas-svg"
+  },
+  {
+    "county_name": "Suwannee",
+    "distance_to_nearest": 53.16,
+    "id": "Suwannee-svg"
+  },
+  {
+    "county_name": "Duval",
+    "distance_to_nearest": 5.07,
+    "id": "Duval-svg"
+  },
+  {
+    "county_name": "Lafayette",
+    "distance_to_nearest": 54.89,
+    "id": "Lafayette-svg"
+  },
+  {
+    "county_name": "Gulf",
+    "distance_to_nearest": 63.25,
+    "id": "Gulf-svg"
+  },
+  {
+    "county_name": "Union",
+    "distance_to_nearest": 25.65,
+    "id": "Union-svg"
+  },
+  {
+    "county_name": "Bradford",
+    "distance_to_nearest": 21.63,
+    "id": "Bradford-svg"
+  },
+  {
+    "county_name": "Wakulla",
+    "distance_to_nearest": 19.83,
+    "id": "Wakulla-svg"
+  },
+  {
+    "county_name": "Brevard",
+    "distance_to_nearest": 37.36,
+    "id": "Brevard-svg"
+  },
+  {
+    "county_name": "Polk",
+    "distance_to_nearest": 16.09,
+    "id": "Polk-svg"
+  },
+  {
+    "county_name": "Osceola",
+    "distance_to_nearest": 22.96,
+    "id": "Osceola-svg"
+  },
+  {
+    "county_name": "Highlands",
+    "distance_to_nearest": 58.22,
+    "id": "Highlands-svg"
+  },
+  {
+    "county_name": "Lee",
+    "distance_to_nearest": 2.9,
+    "id": "Lee-svg"
+  },
+  {
+    "county_name": "Collier",
+    "distance_to_nearest": 43.41,
+    "id": "Collier-svg"
+  },
+  {
+    "county_name": "Miami-Dade",
+    "distance_to_nearest": 12.44,
+    "id": "Miami-Dade-svg"
+  },
+  {
+    "county_name": "Monroe",
+    "distance_to_nearest": 44.84,
+    "id": "Monroe-svg"
+  },
+  {
+    "county_name": "Santa Rosa",
+    "distance_to_nearest": 160.71,
+    "id": "Santa-Rosa-svg"
+  },
+  {
+    "county_name": "Walton",
+    "distance_to_nearest": 109.55,
+    "id": "Walton-svg"
+  },
+  {
+    "county_name": "Jackson",
+    "distance_to_nearest": 57.36,
+    "id": "Jackson-svg"
+  },
+  {
+    "county_name": "Washington",
+    "distance_to_nearest": 79.8,
+    "id": "Washington-svg"
+  },
+  {
+    "county_name": "Nassau",
+    "distance_to_nearest": 25.22,
+    "id": "Nassau-svg"
+  },
+  {
+    "county_name": "Glades",
+    "distance_to_nearest": 49.61,
+    "id": "Glades-svg"
+  },
+  {
+    "county_name": "Charlotte",
+    "distance_to_nearest": 24.93,
+    "id": "Charlotte-svg"
+  },
+  {
+    "county_name": "Sarasota",
+    "distance_to_nearest": 15.58,
+    "id": "Sarasota-svg"
+  },
+  {
+    "county_name": "DeSoto",
+    "distance_to_nearest": 44.2,
+    "id": "DeSoto-svg"
+  },
+  {
+    "county_name": "Flagler",
+    "distance_to_nearest": 55.65,
+    "id": "Flagler-svg"
+  },
+  {
+    "county_name": "Hendry",
+    "distance_to_nearest": 42.33,
+    "id": "Hendry-svg"
+  },
+  {
+    "county_name": "Indian River",
+    "distance_to_nearest": 24.31,
+    "id": "Indian-River-svg"
+  },
+  {
+    "county_name": "Broward",
+    "distance_to_nearest": 15.19,
+    "id": "Broward-svg"
+  },
+  {
+    "county_name": "Escambia",
+    "distance_to_nearest": 181.06,
+    "id": "Escambia-svg"
+  },
+  {
+    "county_name": "Okeechobee",
+    "distance_to_nearest": 34.06,
+    "id": "Okeechobee-svg"
+  },
+  {
+    "county_name": "Franklin",
+    "distance_to_nearest": 48.96,
+    "id": "Franklin-svg"
+  },
+  {
+    "county_name": "Alachua",
+    "distance_to_nearest": 1.09,
+    "id": "Alachua-svg"
+  },
+  {
+    "county_name": "St. Johns",
+    "distance_to_nearest": 27.27,
+    "id": "St-Johns-svg"
+  }
+]

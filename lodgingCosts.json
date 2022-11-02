@@ -1,0 +1,542 @@
+[
+  {
+    "county": "Leon",
+    "name": "North Florida Women's Services",
+    "id": "id_01",
+    "median ($)": "$100",
+    "mean ($)": "$106",
+    "max ($)": "$355",
+    "min ($)": "$40",
+    "hotels_number_price_available": 53
+  },
+  {
+    "county": "Leon",
+    "name": "Planned Parenthood - Tallahassee Health Center",
+    "id": "id_02",
+    "median ($)": "$99",
+    "mean ($)": "$106",
+    "max ($)": "$355",
+    "min ($)": "$45",
+    "hotels_number_price_available": 65
+  },
+  {
+    "county": "Alachua",
+    "name": "All Women’s Health Center of Gainesville",
+    "id": "id_03",
+    "median ($)": "$124",
+    "mean ($)": "$138",
+    "max ($)": "$283",
+    "min ($)": "$72",
+    "hotels_number_price_available": 16
+  },
+  {
+    "county": "Alachua",
+    "name": "Bread & Roses Women's Health Center",
+    "id": "id_04",
+    "median ($)": "$105",
+    "mean ($)": "$122",
+    "max ($)": "$283",
+    "min ($)": "$59",
+    "hotels_number_price_available": 32
+  },
+  {
+    "county": "Duval",
+    "name": "A Woman’s Choice of Jacksonville",
+    "id": "id_05",
+    "median ($)": "$90",
+    "mean ($)": "$104",
+    "max ($)": "$212",
+    "min ($)": "$47",
+    "hotels_number_price_available": 36
+  },
+  {
+    "county": "Duval",
+    "name": "All Women’s Health Center of Jacksonville",
+    "id": "id_06",
+    "median ($)": "$92",
+    "mean ($)": "$107",
+    "max ($)": "$212",
+    "min ($)": "$47",
+    "hotels_number_price_available": 33
+  },
+  {
+    "county": "Duval",
+    "name": "Florida Women’s Center",
+    "id": "id_07",
+    "median ($)": "$90",
+    "mean ($)": "$102",
+    "max ($)": "$212",
+    "min ($)": "$47",
+    "hotels_number_price_available": 36
+  },
+  {
+    "county": "Duval",
+    "name": "Planned Parenthood - Jacksonville Health Center",
+    "id": "id_08",
+    "median ($)": "$78",
+    "mean ($)": "$88",
+    "max ($)": "$194",
+    "min ($)": "$56",
+    "hotels_number_price_available": 35
+  },
+  {
+    "county": "Orange",
+    "name": "Planned Parenthood - East Orlando Health Center",
+    "id": "id_09",
+    "median ($)": "$110",
+    "mean ($)": "$109",
+    "max ($)": "$204",
+    "min ($)": "$60",
+    "hotels_number_price_available": 19
+  },
+  {
+    "county": "Osceola",
+    "name": "Planned Parenthood - Kissimmee Health Center",
+    "id": "id_10",
+    "median ($)": "$65",
+    "mean ($)": "$70",
+    "max ($)": "$144",
+    "min ($)": "$30",
+    "hotels_number_price_available": 29
+  },
+  {
+    "county": "Polk",
+    "name": "Lakeland Women's Health Center, Inc",
+    "id": "id_11",
+    "median ($)": "$109",
+    "mean ($)": "$110",
+    "max ($)": "$200",
+    "min ($)": "$61",
+    "hotels_number_price_available": 32
+  },
+  {
+    "county": "Seminole",
+    "name": "All Women’s Health Center of Orlando",
+    "id": "id_12",
+    "median ($)": "$80",
+    "mean ($)": "$101",
+    "max ($)": "$220",
+    "min ($)": "$47",
+    "hotels_number_price_available": 23
+  },
+  {
+    "county": "Hillsborough",
+    "name": "All Women’s Health Center of North Tampa",
+    "id": "id_13",
+    "median ($)": "$112",
+    "mean ($)": "$129",
+    "max ($)": "$297",
+    "min ($)": "$75",
+    "hotels_number_price_available": 16
+  },
+  {
+    "county": "Hillsborough",
+    "name": "All Women’s Health Center of Tampa / Tampa Abortion Pill",
+    "id": "id_14",
+    "median ($)": "$159",
+    "mean ($)": "$180",
+    "max ($)": "$454",
+    "min ($)": "$64",
+    "hotels_number_price_available": 65
+  },
+  {
+    "county": "Hillsborough",
+    "name": "Planned Parenthood - North Tampa Health Center",
+    "id": "id_15",
+    "median ($)": "$102",
+    "mean ($)": "$121",
+    "max ($)": "$296",
+    "min ($)": "$69",
+    "hotels_number_price_available": 8
+  },
+  {
+    "county": "Hillsborough",
+    "name": "Tampa Woman’s Health Center",
+    "id": "id_16",
+    "median ($)": "$107",
+    "mean ($)": "$128",
+    "max ($)": "$297",
+    "min ($)": "$75",
+    "hotels_number_price_available": 16
+  },
+  {
+    "county": "Hillsborough",
+    "name": "Women's Center of Hyde Park Tampa",
+    "id": "id_17",
+    "median ($)": "$143",
+    "mean ($)": "$179",
+    "max ($)": "$509",
+    "min ($)": "$63",
+    "hotels_number_price_available": 35
+  },
+  {
+    "county": "Hillsborough",
+    "name": "Planned Parenthood - Tampa Health Center (licensed)",
+    "id": "id_18",
+    "median ($)": "$121",
+    "mean ($)": "$135",
+    "max ($)": "$345",
+    "min ($)": "$57",
+    "hotels_number_price_available": 49
+  },
+  {
+    "county": "Pinellas",
+    "name": "Bread and Roses Woman's Health Center",
+    "id": "id_19",
+    "median ($)": "$153",
+    "mean ($)": "$161",
+    "max ($)": "$405",
+    "min ($)": "$69",
+    "hotels_number_price_available": 83
+  },
+  {
+    "county": "Pinellas",
+    "name": "Women’s OB-GYN Center of Countryside Clearwater / All Women's Health Center of Clearwater",
+    "id": "id_20",
+    "median ($)": "$105",
+    "mean ($)": "$118",
+    "max ($)": "$196",
+    "min ($)": "$69",
+    "hotels_number_price_available": 5
+  },
+  {
+    "county": "Pinellas",
+    "name": "All Women’s Health Center / All Women's Health Center of St. Petersburg, Inc.",
+    "id": "id_21",
+    "median ($)": "$117",
+    "mean ($)": "$156",
+    "max ($)": "$699",
+    "min ($)": "$60",
+    "hotels_number_price_available": 29
+  },
+  {
+    "county": "Pinellas",
+    "name": "St. Petersburg Woman’s Health Center",
+    "id": "id_22",
+    "median ($)": "$117",
+    "mean ($)": "$141",
+    "max ($)": "$874",
+    "min ($)": "$60",
+    "hotels_number_price_available": 63
+  },
+  {
+    "county": "Pinellas",
+    "name": "Planned Parenthood - St. Petersburg Health Center (licensed)",
+    "id": "id_23",
+    "median ($)": "$120",
+    "mean ($)": "$158",
+    "max ($)": "$699",
+    "min ($)": "$63",
+    "hotels_number_price_available": 24
+  },
+  {
+    "county": "Sarasota",
+    "name": "All Women’s Health Center of Sarasota",
+    "id": "id_24",
+    "median ($)": "$223",
+    "mean ($)": "$265",
+    "max ($)": "$959",
+    "min ($)": "$98",
+    "hotels_number_price_available": 28
+  },
+  {
+    "county": "Sarasota",
+    "name": "Planned Parenthood - Sarasota Health Center",
+    "id": "id_25",
+    "median ($)": "$178",
+    "mean ($)": "$231",
+    "max ($)": "$607",
+    "min ($)": "$61",
+    "hotels_number_price_available": 31
+  },
+  {
+    "county": "Broward",
+    "name": "East Cypress Women’s Center",
+    "id": "id_26",
+    "median ($)": "$104",
+    "mean ($)": "$120",
+    "max ($)": "$316",
+    "min ($)": "$46",
+    "hotels_number_price_available": 76
+  },
+  {
+    "county": "Broward",
+    "name": "Women’s Center of Ft. Lauderdale",
+    "id": "id_27",
+    "median ($)": "$120",
+    "mean ($)": "$124",
+    "max ($)": "$212",
+    "min ($)": "$45",
+    "hotels_number_price_available": 72
+  },
+  {
+    "county": "Broward",
+    "name": "A Woman’s Center of Hollywood",
+    "id": "id_28",
+    "median ($)": "$114",
+    "mean ($)": "$142",
+    "max ($)": "$1,199",
+    "min ($)": "$40",
+    "hotels_number_price_available": 66
+  },
+  {
+    "county": "Broward",
+    "name": "Miramar Women’s Center",
+    "id": "id_29",
+    "median ($)": "$109",
+    "mean ($)": "$124",
+    "max ($)": "$328",
+    "min ($)": "$40",
+    "hotels_number_price_available": 50
+  },
+  {
+    "county": "Broward",
+    "name": "Planned Parenthood - Pembroke Pines Health Center",
+    "id": "id_30",
+    "median ($)": "$135",
+    "mean ($)": "$165",
+    "max ($)": "$1,119",
+    "min ($)": "$31",
+    "hotels_number_price_available": 37
+  },
+  {
+    "county": "Broward",
+    "name": "Aastra Women’s Center",
+    "id": "id_31",
+    "median ($)": "$133",
+    "mean ($)": "$129",
+    "max ($)": "$188",
+    "min ($)": "$31",
+    "hotels_number_price_available": 21
+  },
+  {
+    "county": "Broward",
+    "name": "Office of Michael J. Benjamin, M.D./BSS International Inc (Bssicare)",
+    "id": "id_32",
+    "median ($)": "$107",
+    "mean ($)": "$114",
+    "max ($)": "$316",
+    "min ($)": "$49",
+    "hotels_number_price_available": 34
+  },
+  {
+    "county": "St. Lucie",
+    "name": "Planned Parenthood - Treasure Coast Health Center",
+    "id": "id_33",
+    "median ($)": "$103",
+    "mean ($)": "$103",
+    "max ($)": "$107",
+    "min ($)": "$98",
+    "hotels_number_price_available": 2
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "A GYN Diagnostic Center",
+    "id": "id_34",
+    "median ($)": "$103",
+    "mean ($)": "$97",
+    "max ($)": "$129",
+    "min ($)": "$57",
+    "hotels_number_price_available": 14
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "A Hialeah Woman’s Care Center",
+    "id": "id_35",
+    "median ($)": "$102",
+    "mean ($)": "$92",
+    "max ($)": "$129",
+    "min ($)": "$44",
+    "hotels_number_price_available": 15
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "Abortion Hialeah Women Center / A Hialeah Women Center, Inc.",
+    "id": "id_36",
+    "median ($)": "$112",
+    "mean ($)": "$118",
+    "max ($)": "$240",
+    "min ($)": "$44",
+    "hotels_number_price_available": 77
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "A Woman’s Choice",
+    "id": "id_37",
+    "median ($)": "$133",
+    "mean ($)": "$125",
+    "max ($)": "$165",
+    "min ($)": "$72",
+    "hotels_number_price_available": 14
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "Gynecology and More",
+    "id": "id_38",
+    "median ($)": "$88",
+    "mean ($)": "$96",
+    "max ($)": "$155",
+    "min ($)": "$60",
+    "hotels_number_price_available": 7
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "Blue Coral Women’s Care",
+    "id": "id_39",
+    "median ($)": "$127",
+    "mean ($)": "$146",
+    "max ($)": "$404",
+    "min ($)": "$69",
+    "hotels_number_price_available": 41
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "Eve Medical Center of Kendall",
+    "id": "id_40",
+    "median ($)": "$137",
+    "mean ($)": "$162",
+    "max ($)": "$433",
+    "min ($)": "$58",
+    "hotels_number_price_available": 45
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "Planned Parenthood - Golden Glades-Miami Health Center (licensed)",
+    "id": "id_41",
+    "median ($)": "$155",
+    "mean ($)": "$144",
+    "max ($)": "$299",
+    "min ($)": "$41",
+    "hotels_number_price_available": 11
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "Planned Parenthood of South, East and North Florida - Jean Shehan Health Center",
+    "id": "id_42",
+    "median ($)": "$153",
+    "mean ($)": "$176",
+    "max ($)": "$631",
+    "min ($)": "$28",
+    "hotels_number_price_available": 132
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "Planned Parenthood of South, East and North Florida - Kendall Health Center",
+    "id": "id_43",
+    "median ($)": "$118",
+    "mean ($)": "$123",
+    "max ($)": "$179",
+    "min ($)": "$92",
+    "hotels_number_price_available": 12
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "Today’s Women Medical Center",
+    "id": "id_44",
+    "median ($)": "$132",
+    "mean ($)": "$153",
+    "max ($)": "$495",
+    "min ($)": "$50",
+    "hotels_number_price_available": 43
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "Advanced Woman's Care Center (licensed)",
+    "id": "id_45",
+    "median ($)": "$138",
+    "mean ($)": "$155",
+    "max ($)": "$561",
+    "min ($)": "$50",
+    "hotels_number_price_available": 146
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "A WOMAN'S CARE NORTH MIAMI BEACH",
+    "id": "id_46",
+    "median ($)": "$119",
+    "mean ($)": "$120",
+    "max ($)": "$206",
+    "min ($)": "$41",
+    "hotels_number_price_available": 10
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "A Choice for Women",
+    "id": "id_47",
+    "median ($)": "$166",
+    "mean ($)": "$283",
+    "max ($)": "$2,821",
+    "min ($)": "$41",
+    "hotels_number_price_available": 45
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "Women & Teens Healthcare",
+    "id": "id_48",
+    "median ($)": "$152",
+    "mean ($)": "$276",
+    "max ($)": "$2,821",
+    "min ($)": "$41",
+    "hotels_number_price_available": 45
+  },
+  {
+    "county": "Palm Beach",
+    "name": "Planned Parenthood - Boca Raton Health Center",
+    "id": "id_49",
+    "median ($)": "$135",
+    "mean ($)": "$135",
+    "max ($)": "$138",
+    "min ($)": "$131",
+    "hotels_number_price_available": 2
+  },
+  {
+    "county": "Palm Beach",
+    "name": "Planned Parenthood - Florida Mango Health Center",
+    "id": "id_50",
+    "median ($)": "$181",
+    "mean ($)": "$186",
+    "max ($)": "$494",
+    "min ($)": "$76",
+    "hotels_number_price_available": 54
+  },
+  {
+    "county": "Palm Beach",
+    "name": "Presidential Women’s Center",
+    "id": "id_51",
+    "median ($)": "$181",
+    "mean ($)": "$189",
+    "max ($)": "$494",
+    "min ($)": "$76",
+    "hotels_number_price_available": 54
+  },
+  {
+    "county": "St.Lucie",
+    "name": "A Woman’s World Medical Center",
+    "id": "id_52",
+    "median ($)": "$96",
+    "mean ($)": "$104",
+    "max ($)": "$189",
+    "min ($)": "$56",
+    "hotels_number_price_available": 13
+  },
+  {
+    "county": "Lee",
+    "name": "Planned Parenthood - Fort Myers Health Center (licensed)",
+    "id": "id_53",
+    "median ($)": "$123",
+    "mean ($)": "$128",
+    "max ($)": "$259",
+    "min ($)": "$69",
+    "hotels_number_price_available": 16
+  },
+  {
+    "county": "Miami-Dade",
+    "name": "Millennium Women Center (licensed)",
+    "id": "id_54",
+    "median ($)": "$124",
+    "mean ($)": "$124",
+    "max ($)": "$179",
+    "min ($)": "$95",
+    "hotels_number_price_available": 13
+  }
+]
