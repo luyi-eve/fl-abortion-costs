@@ -789,7 +789,8 @@
                 <!-- tooltip02: out of state case -->
                 <script>
                     let outOfState = []
-                    let file02 = 'outOfState.json'
+                    //let file02 = 'outOfState.json'(read from local computer)
+                    let file02 = "https://raw.githubusercontent.com/luyi-eve/fl-abortion-costs/main/data/outOfState.json"
 
                     fetch(file02) 
                         .then(response => response.json())
