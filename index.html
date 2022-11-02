@@ -733,7 +733,8 @@
                 <!-- tooltip01: total case -->
                 <script>
                     let totalCase = []
-                    let file01 = 'totalCase.json'
+                    //let file01 = 'totalCase.json' (read from local computer)
+                    let file01 = "https://raw.githubusercontent.com/luyi-eve/fl-abortion-costs/main/data/totalCase.json"
 
                     fetch(file01) 
                         .then(response => response.json())
@@ -2796,7 +2797,8 @@
                 <script>
 
                     let distanceToNearest = []
-                    let file04 = 'distanceToNearest.json'
+                    //let file04 = 'distanceToNearest.json' (read from local computer)
+                    let file04 = "https://raw.githubusercontent.com/luyi-eve/fl-abortion-costs/main/data/distanceToNearest.json"
 
                     fetch(file04) 
                         .then(response => response.json())
@@ -3130,7 +3132,8 @@
                 <!-- tooltip05: gas prices -->
                 <script>
                     let top10GasPrices = []
-                    let file05 = 'top10GasPrices.json'
+                    //let file05 = 'top10GasPrices.json' (read from local computer)
+                    let file05 = "https://raw.githubusercontent.com/luyi-eve/fl-abortion-costs/main/data/top10GasPrices.json"
 
                     fetch(file05) 
                         .then(response => response.json())
@@ -3567,10 +3570,13 @@
                         </text>
                     </g>
                 </svg>
+                <!-- tooltip: lodging costs map -->
                 <script>
 
                     let lodgingCosts = []
-                    let file = 'lodgingCosts.json'
+                    //let file = 'lodgingCosts.json'(read from local computer)
+                    let file = "https://raw.githubusercontent.com/luyi-eve/fl-abortion-costs/main/data/lodgingCosts.json"
+
 
                     fetch(file) 
                         .then(response => response.json())
