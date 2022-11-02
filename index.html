@@ -3128,21 +3128,21 @@
                 </svg>
                 <!-- tooltip05: gas prices -->
                 <script>
-                    let top_10_gas_prices = []
-                    let file05 = 'top_10_gas_prices.json'
+                    let top10GasPrices = []
+                    let file05 = 'top10GasPrices.json'
 
                     fetch(file05) 
                         .then(response => response.json())
                         .then(data => {
-                            top_10_gas_prices = data
-                            console.log(top_10_gas_prices)
+                            top10GasPrices = data
+                            console.log(top10GasPrices)
                         })
 
                     function showTooltip05(event, text) {
 
                         let template05 = 'No data' 
 
-                        for(let gas of top_10_gas_prices){
+                        for(let gas of top10GasPrices){
                             //console.log(event.target.id)
                             //console.log(gas.gas_price)
 
