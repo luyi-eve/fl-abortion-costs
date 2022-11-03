@@ -1,6 +1,6 @@
 # How much it takes to get an abortion in the 'PURPLE' state of Florida?
 
-- Click to read the [full story](https://luyi-eve.github.io/fl-abortion-costs/) and find me at [my portfolio site](https://luyi-eve.github.io).
+- Click to read the [Full Story](https://luyi-eve.github.io/fl-abortion-costs/) and find me at [my portfolio site](https://luyi-eve.github.io).
 
 ## Goals
 
