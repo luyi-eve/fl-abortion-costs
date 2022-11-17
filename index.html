@@ -527,7 +527,18 @@
         /* Make section-map responsive for mobile size and disable sticky effect! */
         @media only screen and (max-width: 40em) {
             /* resize for mobile */
-            div.scrollytelling-wiz-mapbox {height: 50vh;width: 60vh;}
+            div.scrollytelling-wiz-mapbox {
+                height: 50vh;
+                width: 50vh;
+
+                /* Adjust #section-mapbox container for mobile size smaller than 375px - iphone 12 regular size */
+                /* When mobile screen is smaller than 375px,
+                    swiper container max(150.07px)+map container max(183.47)=333.49 < 375px,
+                    so there will be about 40px white space appearing on the right side of the page. 
+                    To fix this：do below👇（center the 50% viewport box）:
+                */
+                margin:0 auto;
+            }
             .swiper {width: 45%;}
             #map {width: 55%;}
             
@@ -552,17 +563,6 @@
             }
         }
 
-        /* Adjust #section-mapbox container for mobile size smaller than 375px - iphone 12 regular size */
-        /* When mobile screen is smaller than 375px,
-            swiper container max(150.07px)+map container max(183.47)=333.49 < 375px,
-            so there will be about 40px white space appearing on the right side of the page. 
-            To fix this: 
-            1) either adding 20.775px on the left side as padding space to center the parent container (this needs precise calculation for different browser)--> #section-mapbox {max-width: none;margin: 0 auto;padding-left: 22px;}
-            2) or do below👇 (change width from 50vh to 60vh)
-         */
-        @media only screen and (max-width: 375px) {
-            div.scrollytelling-wiz-mapbox {height: 50vh;width: 60vh;}
-        }
         
     </style>
   
