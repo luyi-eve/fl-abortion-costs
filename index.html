@@ -101,7 +101,7 @@
 
         #section-mapbox {
             max-width: none;
-            margin: 0 auto ;
+            margin: 0 auto ; 
             padding: 0 0;
         }
 
@@ -434,8 +434,8 @@
         /* Below starts Swiper and Mapbox customized style */
             * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            /*margin: 0;
+            padding: 0;*/
             }
 
             .sticky{
@@ -538,7 +538,7 @@
 
             /* resize the text for mobile */
             .scrollingText, .scrollingText span.area, .scrollingText span {
-                font-size: 13px;
+                font-size: 9px;
             }
 
             /* narrow spacing between arrow and text on slider */
@@ -550,8 +550,22 @@
             .swiper-button-prev, .swiper-button-next {
             --swiper-navigation-size: 15px;
             }
-
         }
+
+        /* Adjust #section-mapbox container for mobile size smaller than 375px - iphone 12 regular size */
+        /* When mobile screen is smaller than 375px,
+            swiper container max(150.07px)+map container max(183.47)=333.49 < 375px,
+            so there will be about 40px white space appearing on the right side of the page. 
+            To fix this, I'm adding 20.775px on the left side as padding space to center the parent container on the page.
+         */
+        @media only screen and (max-width: 375px) {
+            #section-mapbox {
+                    max-width: none;
+                    margin: 0 auto;
+                    padding-left: 20.775px; 
+                }
+        }
+        
     </style>
   
     <!--Graphic 04: distance choropleth map-->
