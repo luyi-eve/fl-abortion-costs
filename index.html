@@ -647,6 +647,49 @@
             max-width: 300px;
         }
 
+        /* Make tooltips responsive for mobile screen */
+        @media only screen and (max-width: 375px) {
+            #tooltip01, #tooltip02 {
+                font-size:15px;
+                /* activate fixed width for tooltips */
+                width:150px;
+            }
+
+            #tooltip02 {
+                font-size:15px;
+                /* activate fixed width for tooltips */
+                width:160px;
+            }
+
+            #tooltip04 {
+                font-size:12px;
+                padding: 8px;
+
+                /* activate fixed width for tooltips */
+                width:150px;
+            }
+
+            #tooltip05 {
+                /* activate fixed width for tooltips */
+                width:80px;
+            }
+
+            div#graphic06 #tooltip {
+                line-height:1.4;
+                font-size:8px;
+                padding: 8px;
+
+                /* activate fixed width for tooltips */
+                width:150px;
+            }
+
+            #tooltip hr {
+                height:1px;
+                width:95%;
+            }
+        }
+        
+
         #tooltip hr {
             background-color: rgba(0, 0, 0, 0.426);
             width:90%;
@@ -1912,7 +1955,7 @@
                         <path id="Hamilton" d="M215.35,743c0,7.9-6.4,14.3-14.3,14.3s-14.3-6.4-14.3-14.3h0c0-7.9,6.4-14.3,14.3-14.3,7.9,0,14.3,6.4,14.3,14.3h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
                         <path id="Gulf" d="M185.65,764.7c0,7.7-6.2,13.9-13.9,13.9s-13.9-6.2-13.9-13.9h0c0-7.7,6.2-13.9,13.9-13.9,7.7,0,13.9,6.2,13.9,13.9h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
                         <path id="Highlands" d="M150.35,790.6c0,7.4-6,13.3-13.3,13.3s-13.3-6-13.3-13.3h0c0-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
-                        <path id="Santa_Rosa" d="M868.15,262.5c0,11.9-9.7,21.6-21.6,21.6s-21.6-9.7-21.6-21.6h0c0-11.9,9.7-21.6,21.6-21.6s21.6,9.7,21.6,21.6h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
+                        <path id="Santa Rosa" d="M868.15,262.5c0,11.9-9.7,21.6-21.6,21.6s-21.6-9.7-21.6-21.6h0c0-11.9,9.7-21.6,21.6-21.6s21.6,9.7,21.6,21.6h0" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
                         <path id="Okaloosa" d="M692.75,391.9c0,11-8.9,19.9-19.9,19.9s-19.9-8.9-19.9-19.9,8.9-19.9,19.9-19.9,19.9,8.9,19.9,19.9" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
                         <path id="Walton" d="M510.35,526.2c0,9.9-8,17.9-17.9,17.9s-17.9-8-17.9-17.9,8-17.9,17.9-17.9,17.9,8,17.9,17.9" style="fill:rgba(106,81,163,.6); stroke:#000; stroke-width:.5px;"/>
                     </g>
