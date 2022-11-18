@@ -1691,6 +1691,12 @@
                     // Get place depending on slide number
                     let place = places[index];
                     
+                    // check the screen size, and do different zoom levels
+                    /* mobile zoom version */
+                    if (window.innerWidth < 640){
+                        place.zoom = place.zoom - 2
+                    }
+
                     // Fly to that place
                     map.flyTo(place);     
         
@@ -1701,14 +1707,23 @@
                     "pk.eyJ1IjoiZXNldmUiLCJhIjoiY2xhYnV5a2l1MDQ2ajN1cGU2enRwOHdwcCJ9.QzNPPJyRAnYvpy2VM_rzQQ"; // my own token
         
                 // Create instance of Mapbox map
-                const map = new mapboxgl.Map({
+
+                option = {
                     container: "map", // container ID
                     style: "mapbox://styles/eseve/claj3lskt001c14ny1gudkaiy", // style URL [replaced with my own style]
                     center: [-82.0162, 29.9719], // starting position [lng, lat] --> use kingsley village coordinates
                     zoom: 8.8, // starting zoom --> 8.8 ensures to show Jacksonville city label on map, so do not make it smaller
                     projection: "globe", // display the map as a 3D globe
                     attributionControl: false, //remove parts of mapbox & openstreetmap attribution
-                });
+                }
+
+                if (window.innerWidth < 600){
+                    option.zoom = option.zoom - 2
+                }
+
+                const map = new mapboxgl.Map(option);
+        
+                map.scrollZoom.disable(); //disable mapbox built-in zoomable function
         
         
                 </script>  
