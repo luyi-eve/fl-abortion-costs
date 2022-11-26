@@ -397,7 +397,7 @@
     <!--Graphic 01: two line charts-->
     <style>
         /* add hover effect */
-        svg#two_line_chart circle:hover {
+        svg#two_line_chart_updated path.total_case:hover, svg#two_line_chart_updated path.out_case:hover{
             cursor:pointer;
         }
     </style>
@@ -758,94 +758,130 @@
             <div id="graphic01" class="graphic" style="max-width: 30rem;">
                 <div id="tooltip01" style="position: absolute; display: none;"></div>
                 <div id="tooltip02" style="position: absolute; display: none;"></div>
-                <svg id="two_line_chart"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 921 848.42">
-                    <text transform="translate(90.19 840.35)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
-                        <tspan x="0" y="0">2020</tspan>
-                    </text>
-                    <text transform="translate(449.69 840.35)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
-                        <tspan x="0" y="0">2021</tspan>
-                    </text>
-                    <text transform="translate(808.2 840.35)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
-                        <tspan x="0" y="0">2022</tspan>
-                    </text>
-                    <text transform="translate(10.7 788)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:26px; isolation:isolate;">
-                        <tspan x="0" y="0">3,900</tspan>
-                    </text>
-                    <text transform="translate(10.7 689.3)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:26px; isolation:isolate;">
-                        <tspan x="0" y="0">4,200</tspan>
-                    </text>
-                    <text transform="translate(10.7 491.9)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:26px; isolation:isolate;">
-                        <tspan x="0" y="0">4,800</tspan>
-                    </text>
-                    <text transform="translate(0 372.61)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:26px; isolation:isolate;">
-                        <tspan x="0" y="0">57,000</tspan>
-                    </text>
-                    <text transform="translate(0 126.12)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:26px; isolation:isolate;">
-                        <tspan x="0" y="0">74,000</tspan>
-                    </text>
-                    <text transform="translate(0 53.62)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:26px; isolation:isolate;">
-                        <tspan x="0" y="0">79,000</tspan>
-                    </text>
-                    <line x1="465.9" y1="791.72" x2="465.9" y2="445.31" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
-                    <line x1="824.8" y1="791.72" x2="824.8" y2="774.21" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
-                    <line x1="104.75" y1="791.72" x2="104.75" y2="774.21" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
-                    <line x1="93.55" y1="774.32" x2="837.28" y2="774.32" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
-                    <line x1="105.72" y1="675.62" x2="117.88" y2="675.62" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
-                    <line x1="105.72" y1="478.21" x2="117.88" y2="478.21" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
-                    <path id="out_of_state_line" d="M106.41,745.37c119.83-145.59,239.66-291.17,359.5-291.17s239.01,110.55,358.51,221.09" style="fill:none; stroke:#feb24c; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
-                    <g id="connection_line">
-                        <line x1="465.59" y1="365.71" x2="465.59" y2="445.46" style="fill:none; stroke:#666868; stroke-dasharray:0 0 4 7.99; stroke-width:.75px;"/>
+
+                <svg id="two_line_chart_updated"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 892.68 869.2">
+                    <line id="_2021_highlight_line_down" x1="712.71" y1="798.58" x2="712.71" y2="439" style="fill:none; stroke:#666868;"/>
+                    <line id="_2021_highlight_line_mid" x1="712.71" y1="311" x2="712.71" style="fill:none; stroke:#666868;"/>
+                    <g id="_2021_highlight_line_up">
+                        <g>
+                            <line x1="712.71" y1="311" x2="712.71" y2="313" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
+                            <line x1="712.71" y1="320.85" x2="712.71" y2="447.07" style="fill:none; stroke:#666868; stroke-dasharray:0 0 3.98 7.85; stroke-width:.75px;"/>
+                            <line x1="712.71" y1="451" x2="712.71" y2="453" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
+                        </g>
                     </g>
-                    <line x1="465.44" y1="358.86" x2="465.44" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
-                    <line x1="105.23" y1="358.86" x2="117.88" y2="358.86" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
-                    <line x1="105.23" y1="112.37" x2="117.88" y2="112.37" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
-                    <line x1="105.23" y1="39.87" x2="117.88" y2="39.87" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
-                    <path id="total_line" d="M105.6,99.78C225.55,63.9,345.5,28.02,465.44,28.02s239.24,164.93,358.86,329.87" style="fill:none; opacity:.74; stroke:#4a1486; stroke-miterlimit:10; stroke-width:3px;"/>
-                    <text transform="translate(653.9 87.09)" style="fill:#4a1486; font-family:Calibri, Calibri; font-size:32px; isolation:isolate; opacity:.74;">
+                    <path id="out_line" d="M103.29,705.79c50.75,2.35,101.5,4.69,152.25,14.08,50.75,9.39,101.5,47.9,152.25,47.9s101.5-155.98,152.25-208.45c50.89-52.61,101.78-106.51,152.67-106.51s101.5,5.6,152.25,11.19" style="fill:none; stroke:#feb24b; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
+                    <path id="total_line" d="M104.41,196.72c50.66-5.13,101.32-10.25,151.98-17.44,50.66-7.19,101.32-13.86,151.98-25.69,50.66-11.83,101.32-25.15,151.98-45.31,50.8-20.22,101.6-75.91,152.39-75.91s101.32,136.99,151.98,273.97" style="fill:none; stroke:#7951a3; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
+                    <line id="x_axis" x1="75.2" y1="798.58" x2="884.2" y2="798.58" style="fill:none; stroke:#666868;"/>
+                    <text id="total_caption" transform="translate(256.44 50.65)" style="fill:#4a1486; font-family:Calibri, Calibri; font-size:33px; isolation:isolate; opacity:.74;">
                         <tspan x="0" y="0" style="letter-spacing:-.09em;">T</tspan>
-                        <tspan x="12.75" y="0">o</tspan>
-                        <tspan x="29.62" y="0" style="letter-spacing:-.01em;">t</tspan>
-                        <tspan x="39.95" y="0">al Abortion Cases</tspan>
+                        <tspan x="13.15" y="0">o</tspan>
+                        <tspan x="30.55" y="0" style="letter-spacing:-.01em;">t</tspan>
+                        <tspan x="41.2" y="0" style="letter-spacing:0em;">al Abortion Cases</tspan>
                     </text>
-                    <text transform="translate(718.31 437.78)" style="fill:#feb24c; font-family:Calibri, Calibri; font-size:32px; isolation:isolate;">
+                    <text id="out_caption" transform="translate(322.42 445.32)" style="fill:#feb24c; font-family:Calibri, Calibri; font-size:33px; isolation:isolate;">
                         <tspan x="0" y="0">Abortion Cases </tspan>
-                        <tspan x="-103.48" y="38.4" style="letter-spacing:0em;">b</tspan>
-                        <tspan x="-86.83" y="38.4">y </tspan>
-                        <tspan x="-65.11" y="38.4" style="letter-spacing:-.02em;">P</tspan>
-                        <tspan x="-49.27" y="38.4" style="letter-spacing:0em;">a</tspan>
-                        <tspan x="-34.23" y="38.4">tie</tspan>
-                        <tspan x="-.48" y="38.4" style="letter-spacing:0em;">n</tspan>
-                        <tspan x="16.03" y="38.4">ts Out of S</tspan>
-                        <tspan x="151.03" y="38.4" style="letter-spacing:-.01em;">t</tspan>
-                        <tspan x="161.36" y="38.4" style="letter-spacing:0em;">a</tspan>
-                        <tspan x="176.39" y="38.4" style="letter-spacing:-.01em;">t</tspan>
-                        <tspan x="186.77" y="38.4">e</tspan>
+                        <tspan x="-106.72" y="39.6" style="letter-spacing:0em;">b</tspan>
+                        <tspan x="-89.54" y="39.6" style="letter-spacing:0em;">y </tspan>
+                        <tspan x="-67.14" y="39.6" style="letter-spacing:-.02em;">P</tspan>
+                        <tspan x="-50.8" y="39.6" style="letter-spacing:0em;">a</tspan>
+                        <tspan x="-35.3" y="39.6">tie</tspan>
+                        <tspan x="-.5" y="39.6" style="letter-spacing:0em;">n</tspan>
+                        <tspan x="16.53" y="39.6" style="letter-spacing:0em;">ts Out of S</tspan>
+                        <tspan x="155.75" y="39.6" style="letter-spacing:-.01em;">t</tspan>
+                        <tspan x="166.4" y="39.6" style="letter-spacing:0em;">a</tspan>
+                        <tspan x="181.9" y="39.6" style="letter-spacing:-.01em;">t</tspan>
+                        <tspan x="192.6" y="39.6" style="letter-spacing:0em;">e</tspan>
                     </text>
-                    <g id="circle-5">
-                        <circle class="total-case" cx="465.5" cy="28.01" r="7.49" style="fill:#666;"/>
+                    <g id="out_horizontal">
+                        <line x1="89.65" y1="473.64" x2="102.5" y2="473.64" style="fill:none; stroke:#666868;"/>
                     </g>
-                    <g id="circle-4">
-                        <circle class="total-case" cx="824.5" cy="359.01" r="7.49" style="fill:#666;"/>
+                    <g id="total_horizontal">
+                        <line x1="90.33" y1="44.89" x2="103.2" y2="44.89" style="fill:none; stroke:#666868;"/>
                     </g>
-                    <g id="circle-1">
-                        <circle class="total-case" cx="105.5" cy="100.01" r="7.49" style="fill:#666;"/>
+                    <g id="out_year_axis">
+                        <text transform="translate(74.25 860.6)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
+                            <tspan x="0" y="0">2017</tspan>
+                        </text>
+                        <text transform="translate(226.5 860.6)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
+                            <tspan x="0" y="0">2018</tspan>
+                        </text>
+                        <text transform="translate(378.75 860.6)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
+                            <tspan x="0" y="0">2019</tspan>
+                        </text>
+                        <text transform="translate(531 860.6)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
+                            <tspan x="0" y="0">2020</tspan>
+                        </text>
+                        <text transform="translate(683.67 860.6)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
+                            <tspan x="0" y="0">2021</tspan>
+                        </text>
+                        <text transform="translate(835.92 860.6)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
+                            <tspan x="0" y="0">2022</tspan>
+                        </text>
                     </g>
-                    <g id="circle-3">
-                        <circle class="out-of-state" cx="824.5" cy="675.01" r="7.49" style="fill:#666;"/>
+                    <g id="number_axis">
+                        <g id="out_number_axis">
+                            <text transform="translate(9.17 479.29)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
+                                <tspan x="0" y="0">4,700</tspan>
+                            </text>
+                        </g>
+                        <g id="total_number_axis">
+                            <text transform="translate(0 50.61)" style="fill:#7d7d7d; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
+                                <tspan x="0" y="0">79,000</tspan>
+                            </text>
+                        </g>
                     </g>
-                    <g id="circle-2">
-                        <circle class="out-of-state" cx="106.5" cy="746.01" r="7.49" style="fill:#666;"/>
+                    <g id="out_vertical">
+                        <line x1="103.29" y1="799" x2="103.29" y2="816" style="fill:none; stroke:#666868;"/>
+                        <line x1="255.54" y1="799" x2="255.54" y2="816" style="fill:none; stroke:#666868;"/>
+                        <line x1="407.79" y1="799" x2="407.79" y2="816" style="fill:none; stroke:#666868;"/>
+                        <line x1="560.04" y1="799" x2="560.04" y2="816" style="fill:none; stroke:#666868;"/>
+                        <line x1="712.71" y1="799" x2="712.71" y2="816" style="fill:none; stroke:#666868;"/>
+                        <line x1="864.96" y1="799" x2="864.96" y2="816" style="fill:none; stroke:#666868;"/>
                     </g>
-                    <g id="circle-6">
-                        <circle class="out-of-state" cx="465.5" cy="454.01" r="7.49" style="fill:#666;"/>
+                    <g id="out_2017">
+                        <path class="out_case" d="M112.19,705.79c0,4.92-3.99,8.9-8.9,8.9s-8.9-3.99-8.9-8.9,3.99-8.9,8.9-8.9,8.9,3.99,8.9,8.9" style="fill:#feb24b;"/>
+                    </g>
+                    <g id="out_2018">
+                        <path class="out_case"  d="M264.44,719.87c0,4.92-3.99,8.9-8.9,8.9s-8.9-3.99-8.9-8.9,3.99-8.9,8.9-8.9,8.9,3.99,8.9,8.9" style="fill:#feb24b;"/>
+                    </g>
+                    <g id="out_2019">
+                        <path class="out_case" d="M416.69,767.77c0,4.92-3.99,8.9-8.9,8.9s-8.9-3.99-8.9-8.9,3.99-8.9,8.9-8.9,8.9,3.99,8.9,8.9" style="fill:#feb24b;"/>
+                    </g>
+                    <g id="out_2020">
+                        <path class="out_case"  d="M568.94,559.33c0,4.92-3.99,8.9-8.9,8.9s-8.9-3.99-8.9-8.9,3.99-8.9,8.9-8.9,8.9,3.99,8.9,8.9" style="fill:#feb24b;"/>
+                    </g>
+                    <g id="out_2021">
+                        <path class="out_case" d="M721.61,452.82c0,4.92-3.99,8.9-8.9,8.9s-8.9-3.99-8.9-8.9,3.99-8.9,8.9-8.9,8.9,3.99,8.9,8.9" style="fill:#feb24b;"/>
+                    </g>
+                    <g id="out_2022">
+                        <path class="out_case" d="M873.86,464.01c0,4.92-3.99,8.9-8.9,8.9s-8.9-3.99-8.9-8.9,3.99-8.9,8.9-8.9,8.9,3.99,8.9,8.9" style="fill:#feb24b;"/>
+                    </g>
+                    <g id="total_2017">
+                        <path class="total_case"  d="M113.41,196.72c0,4.97-4.03,9-9,9s-9-4.03-9-9,4.03-9,9-9,9,4.03,9,9" style="fill:#7951a3;"/>
+                    </g>
+                    <g id="total_2018">
+                        <path class="total_case"  d="M265.39,179.28c0,4.97-4.03,9-9,9s-9-4.03-9-9,4.03-9,9-9,9,4.03,9,9" style="fill:#7951a3;"/>
+                    </g>
+                    <g id="total_2019">
+                        <path class="total_case"  d="M417.37,153.59c0,4.97-4.03,9-9,9s-9-4.03-9-9,4.03-9,9-9,9,4.03,9,9" style="fill:#7951a3;"/>
+                    </g>
+                    <g id="total_2020">
+                        <path class="total_case"  d="M569.34,108.27c0,4.97-4.03,9-9,9s-9-4.03-9-9,4.03-9,9-9,9,4.03,9,9" style="fill:#7951a3;"/>
+                    </g>
+                    <g id="total_2021">
+                        <path class="total_case"  d="M721.74,32.36c0,4.97-4.03,9-9,9s-9-4.03-9-9,4.03-9,9-9,9,4.03,9,9" style="fill:#7951a3;"/>
+                    </g>
+                    <g id="total_2022">
+                        <path class="total_case" d="M873.72,306.33c0,4.97-4.03,9-9,9s-9-4.03-9-9,4.03-9,9-9,9,4.03,9,9" style="fill:#7951a3;"/>
                     </g>
                 </svg>
+
                 <!-- tooltip01: total case -->
                 <script>
                     let totalCase = []
-                    //let file01 = 'totalCase.json' (read from local computer)
-                    let file01 = "https://raw.githubusercontent.com/luyi-eve/fl-abortion-costs/main/data/totalCase.json"
+                    //let file01 = 'data/totalCase_2.0.json' //(read from local computer)
+                    let file01 = "https://github.com/luyi-eve/fl-abortion-costs/blob/main/data/totalCase_2.0.json"
 
                     fetch(file01) 
                         .then(response => response.json())
@@ -859,7 +895,7 @@
                         let template01 = 'No data' 
 
                         for(let total of totalCase){
-                           //console.log(event.target.parentElement)
+                        console.log(event.target.parentElement)
 
                             if (total.id == event.target.parentElement.id){
 
@@ -869,7 +905,7 @@
                                     Total Case: <b>${total['total_case']} </b>
                                 `
                             }
- 
+
                         }
                     
                         let tooltip01 = document.getElementById("tooltip01");
@@ -880,13 +916,13 @@
                         
                         }
 
-                    let groupTotal = two_line_chart.getElementsByClassName("total-case")
+                    let groupTotal = two_line_chart_updated.getElementsByClassName("total_case")
                     //console.log(groupTotal)
 
                     for (let circle of groupTotal) {
                         circle.addEventListener('mousemove',showTooltip01)
                     }
-        
+
                     function hideTooltip01() {
                         var tooltip01 = document.getElementById("tooltip01");
                         tooltip01.style.display = "none";
@@ -901,8 +937,8 @@
                 <!-- tooltip02: out of state case -->
                 <script>
                     let outOfState = []
-                    //let file02 = 'outOfState.json'(read from local computer)
-                    let file02 = "https://raw.githubusercontent.com/luyi-eve/fl-abortion-costs/main/data/outOfState.json"
+                    //let file02 = 'data/outOfState_2.0.json'//(read from local computer)
+                    let file02 = "https://raw.githubusercontent.com/luyi-eve/fl-abortion-costs/main/data/outOfState_2.0.json"
 
                     fetch(file02) 
                         .then(response => response.json())
@@ -924,10 +960,10 @@
                                 template02 = `
                                     Year: ${out['year']} 
                                     <br> 
-                                    Out Of State: <b>${out['out_of_case']} </b>
+                                    Out of State: <b>${out['out_of_case']} </b>
                                 `
                             }
- 
+
                         }
                     
                         let tooltip02 = document.getElementById("tooltip02");
@@ -938,7 +974,7 @@
                         
                         }
 
-                    let groupOutOfState = two_line_chart.getElementsByClassName("out-of-state")
+                    let groupOutOfState = two_line_chart_updated.getElementsByClassName("out_case")
                     //console.log(groupOutOfState)
 
                     for (let circle of groupOutOfState) {
@@ -955,6 +991,7 @@
                     }
                         
                 </script>
+               
             </div>
             <p class="writing">
                 <b>Currently, there are 54 abortion providers in Florida</b> which turn out to be a relative high number compared to Alabama and Georgia as many facilities in neighboring states close or stop providing abortion services due to statewide law enforcement.  
