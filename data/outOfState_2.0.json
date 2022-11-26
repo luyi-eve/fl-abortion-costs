@@ -1,0 +1,32 @@
+[
+  {
+    "id": "out_2017",
+    "year": 2017,
+    "out_of_case": 2771
+  },
+  {
+    "id": "out_2018",
+    "year": 2018,
+    "out_of_case": 2654
+  },
+  {
+    "id": "out_2019",
+    "year": 2019,
+    "out_of_case": 2256
+  },
+  {
+    "id": "out_2020",
+    "year": 2020,
+    "out_of_case": 3988
+  },
+  {
+    "id": "out_2021",
+    "year": 2021,
+    "out_of_case": 4873
+  },
+  {
+    "id": "out_2022",
+    "year": 2022,
+    "out_of_case": "4780 "
+  }
+]

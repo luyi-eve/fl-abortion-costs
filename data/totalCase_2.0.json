@@ -1,0 +1,32 @@
+[
+  {
+    "id": "total_2017",
+    "year": 2017,
+    "total_case": 69102
+  },
+  {
+    "id": "total_2018",
+    "year": 2018,
+    "total_case": 70239
+  },
+  {
+    "id": "total_2019",
+    "year": 2019,
+    "total_case": 71914
+  },
+  {
+    "id": "total_2020",
+    "year": 2020,
+    "total_case": 74868
+  },
+  {
+    "id": "total_2021",
+    "year": 2021,
+    "total_case": 79817
+  },
+  {
+    "id": "total_2022",
+    "year": 2022,
+    "total_case": 61956
+  }
+]
