@@ -81,6 +81,15 @@
 
     <!-- Section Container -->
     <style>
+        /* When clicking the top navigation, 
+        to prevent “jump” to that section all of a sudden, 
+        which makes people hard to understand where they are on the page,
+        adding scroll-behavior: smooth will fix the problem:
+        */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Header */
         div.headline {
             margin: 0 auto;
@@ -307,6 +316,15 @@
 
     <!-- Footer Text-->
     <style>
+
+    /* p - starnotes */
+    p.starnotes {
+        max-width: 32rem;   
+        font-size:16px;
+        color:#7d7d7d;    
+        padding-bottom: 0;     
+    }
+
     /* p - footnotes */
     p.footnotes {
         max-width: 32rem;   
@@ -569,19 +587,29 @@
   
     <!--Graphic 04: distance choropleth map-->
     <style>
+        /* make this new layer transparent so tooltips function 
+        can be activated by penetrating this new layer */
+        g#topLayer {
+            pointer-events: none;
+        }
+
+        /* create a new class for the new layer above⬆️ */
+        #topLayer path.topLayerBorder { /* sometimes the position has to be really specific to locate the style */
+            stroke-width: 3.5px !important; 
+            stroke: #342a4e !important;
+        }
+
         /* add hover effect */
         div.graphicWizHover path:hover {
             cursor:pointer;
-            fill:rgba(0, 0, 0, 0.193) ! important;
-            /*stroke-width: 1px! important;*/
-            /*stroke:#7d7d7d! important;
-            stroke-linejoin: round ! important;
-            stroke-width: 3px ! important;*/
+            /*fill:rgba(0, 0, 0, 0.193) ! important; this */
+            /*stroke:#7d7d7d!*/
         }
 
         div.graphicWizHover path {
-            stroke-width: 1px! important
+            stroke-width: 1px !important
         }
+
     </style>
 
     <!--Graphic 05: gas prices chart -->
@@ -749,7 +777,7 @@
         </div>
         <section id="brief-intro">
             <p id="intro">
-                After the U.S. Supreme Court's decision to overturn Roe v. Wade, most states in the Deep South have criminalized abortion or enacted other gestational limits on the procedure. A new Florida law of a 15-week ban with limited exceptions passed this July is now in effect. That said, Florida still serves as a haven for abortion access for people in the Southeast as its neighboring state Georgia has made abortion illegal as early as six weeks of gestational age while in Alabama abortion has been turned into a completely unlawful performance.
+                After the U.S. Supreme Court's decision to overturn Roe v. Wade, most states in the Deep South have criminalized abortion or enacted other gestational limits on the procedure. A new Florida law of a 15-week ban with limited exceptions passed this July is now in effect. That said, Florida still serves as a haven for abortion access for people in the Southeast as its neighboring state Georgia has made abortion illegal as early as six weeks of gestational age while in Alabama abortion has been turned into a completely unlawful action.
             </p>
         </section>
         <br>
@@ -761,7 +789,7 @@
             <br>
             <h2>Florida's 15-week Ban Now Becomes A Haven</h2>
             <p class="writing">
-                In Florida, the number of abortions undertaken has increased over time, peaking in 2021. In 2021, there were 79,817 abortions performed in Florida according to AHCA<a href="#footnote01" id="footnotes-ref-01">[1]</a>, and 4,873 of the total cases were reported by residents out of state.
+                In Florida, the number of abortions undertaken has increased over time, peaking in 2021. In 2021, there were <span style="color:#4a1486;font-weight: bolder;">79,817</span> abortions performed in Florida according to AHCA<a href="#footnote01" id="footnotes-ref-01">[1]</a>, and <span style="color:#feb24c;font-weight:bolder;">4,873</span> of the total cases were reported by residents out of state.
             </p>
             <div id="graphic01" class="graphic" style="max-width: 30rem;">
                 <div id="tooltip01" style="position: absolute; display: none;"></div>
@@ -778,8 +806,22 @@
                             <line x1="712.71" y1="451" x2="712.71" y2="453" style="fill:none; stroke:#666868; stroke-width:.75px;"/>
                         </g>
                     </g>
-                    <path id="out_line" d="M103.29,705.79c50.75,2.35,101.5,4.69,152.25,14.08,50.75,9.39,101.5,47.9,152.25,47.9s101.5-155.98,152.25-208.45c50.89-52.61,101.78-106.51,152.67-106.51s101.5,5.6,152.25,11.19" style="fill:none; stroke:#feb24b; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
-                    <path id="total_line" d="M104.41,196.72c50.66-5.13,101.32-10.25,151.98-17.44,50.66-7.19,101.32-13.86,151.98-25.69,50.66-11.83,101.32-25.15,151.98-45.31,50.8-20.22,101.6-75.91,152.39-75.91s101.32,136.99,151.98,273.97" style="fill:none; stroke:#7951a3; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
+                    <path id="out_line" d="M103.29,705.79c50.75,2.35,101.5,4.69,152.25,14.08,50.75,9.39,101.5,47.9,152.25,47.9s101.5-155.98,152.25-208.45c50.89-52.61,101.78-106.51,152.67-106.51" style="fill:none; stroke:#feb24b; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
+                    <g id="out_dash_line_2022">
+                        <g>
+                            <path d="M712.71,452.82c2,0,4,0,6,.03" style="fill:none; stroke:#feb24b; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
+                            <path d="M731.5,453.06c40.38,1.03,80.76,5.17,121.14,9.59" style="fill:none; stroke:#feb24b; stroke-dasharray:0 0 12.79 12.79; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
+                            <path d="M859,463.35c1.99,.22,3.98,.44,5.96,.66" style="fill:none; stroke:#feb24b; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
+                        </g>
+                    </g>
+                    <path id="total_line" d="M104.41,196.72c50.66-5.13,101.32-10.25,151.98-17.44,50.66-7.19,101.32-13.86,151.98-25.69,50.66-11.83,101.32-25.15,151.98-45.31,50.8-20.22,101.6-75.91,152.39-75.91" style="fill:none; stroke:#7951a3; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
+                    <g id="total_dash_line_2022">
+                        <g>
+                            <path d="M712.74,32.36c1.99,0,3.97,.21,5.96,.62" style="fill:none; stroke:#7951a3; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
+                            <path d="M730.17,37.56c43.44,25.4,86.87,139.96,130.31,257.32" style="fill:none; stroke:#7951a3; stroke-dasharray:0 0 12.41 12.41; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
+                            <path d="M862.64,300.7c.69,1.88,1.39,3.75,2.08,5.63" style="fill:none; stroke:#7951a3; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"/>
+                        </g>
+                    </g>
                     <line id="x_axis" x1="75.2" y1="798.58" x2="884.2" y2="798.58" style="fill:none; stroke:#666868;"/>
                     <text id="total_caption" transform="translate(256.44 50.65)" style="fill:#4a1486; font-family:Calibri, Calibri; font-size:33px; isolation:isolate; opacity:.74;">
                         <tspan x="0" y="0" style="letter-spacing:-.09em;">T</tspan>
@@ -1001,11 +1043,14 @@
                 </script>
                
             </div>
+            <p class="starnotes">
+                *The dashed lines represent the incomplete cases for 2022 which were last updated on Nov 1, 2022 when the story was published. 
+            </p>
             <p class="writing">
                 With the growing influx of out-of-state patients flocking to Florida, the purple state has seen a gradual increase in the total number of patients who seek abortion services over the past few years. 
             </p>
             <p class="writing">
-                <b>Currently, there are 54 abortion providers in Florida.</b> This is a relatively high number compared to Alabama and Georgia as many facilities in the neighboring states either shut down or stopped providing abortion services due to statewide law enforcement. This indicates that a new rush of patients from out of state is on the way. As one of the quickly emerging abortion destinations after Roe's fall, Florida is facing new pressure to meet the increasing demand.
+                <b>Currently, there are 54 abortion providers in Florida.</b> This is a relatively high number compared to Alabama and Georgia as many facilities in the neighboring states either shut down or stopped providing abortion services due to statewide law restrictions. This indicates that a new rush of patients from out of state is on the way. As one of the quickly emerging abortion destinations after Roe's fall, Florida is facing new pressure to meet the increasing demand.
             </p>
             <p class="writing">
                 
@@ -1013,7 +1058,7 @@
             <div id="graphic02" class="graphic" style="max-width: 32rem;">
                 <!--SVG starts below -->
                 <svg id="styled_map"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 939.66 1211.49">
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940.55 1211.49">
                     <g id="state_borders" style="opacity:.3;">
                         <g id="FL_border">
                             <path d="M106.73,597.82c5.1-2,5.4-2,10.4-2.8,3.8-.6,4.9,.7,9.9,.4,4.1-.2,5.9-1.3,9.9-2.4,6.1-1.7,8.9-1.3,16.1-2,10.3-1,11.6-2.6,21.5-4.2,11.1-1.8,19.7-1.4,28.8-1.1,6.6,.3,16.2,.7,28.3,3.3,13.9,3,35.7,7.6,51,21.5,5,4.5,7.9,8.7,14.9,11.1,6,2,11.7,1.6,14.8,6.1,1.7,2.5,.6,3.5,2.3,5.9,3.2,4.5,8.3,2.4,14.8,6.2,6.6,3.8,9.1,10.5,9.6,11.8,.7,1.9,2.9,8.3,0,13.7-2.3,4.3-6.7,5.9-6.3,6.8,.4,1,4.3-1.3,9.5-1,8.3,.6,11.2,7.3,16.5,5.8,2.8-.8,4.8-3.5,4.4-4.6-.4-1-3.2,0-8-1.1-.6-.1-6-1.3-5.9-2.7,0-1.5,6.5-3.8,12.9-2.8,5.5,.8,8,3.5,11,2,1.2-.6,2-1.8,3.7-4.4,2.8-4.2,2.6-5.9,4.6-6.9,1.9-.9,4.7-.6,5.4,.7,1.2,2.1-3,5.9-2.3,6.6,.7,.8,6-3.3,14-8.9,7.8-5.4,3.9-2.3,12.9-8.3,4.3-2.9,7-4.8,9.9-5,.6,0,2.4,0,4.5-1,1.5-.7,1.5-1.1,2.3-1.4,3.4-1.3,6.5,4.5,10.2,3.7,2.4-.5,4.4-3.5,3.8-5-1.1-2.8-10.3,.3-12.3-3.3-1-1.8,0-4.8,1.7-5.7,2.4-1.2,5.4,2.5,7.3,1.3,1.7-1.1,0-4.4,2.1-6.5,1.9-2,4.5-.1,6.9-2.1,2.3-1.9,1.3-4.8,3.4-5.8,1.7-.8,3,.7,6.1,1.2,3.9,.7,5.7-1,10.2-1.9,1.2-.2,6.8-1.4,11.9,.4,6.9,2.4,6.1,7.9,14.4,12.5,3.1,1.7,6,2.5,10.7,3.7,7.9,2.1,11,1.5,12.9,4.2,1.4,2,.3,3.1,2.2,8.7,.2,.5,1,2.8,2.5,5.7,1.8,3.4,3,5.6,5.4,7.6,1.6,1.3,1.7,.8,6.8,3.7,3.2,1.8,4.9,2.7,5.9,3.8,2.7,3,3.3,6.7,3.4,7.5,.5,4.3-1.5,5.6-.3,8,1.1,2.3,3.1,1.6,6.1,4.6,3.1,3,2.1,4.8,4.8,6.7,2.8,2,4.5,.5,7.4,2.3,1.7,1.1,2.7,3.1,4.5,7,3.4,7.1,3.2,9.5,5.5,10.6,2.4,1.1,3.8-.7,6.4,.8,2.6,1.5,3.5,4.4,3.6,4.7,.6,2.2-.3,2.8,.1,5.5,.3,2.4,1.6,6.1,3.5,6.3,1.8,.2,2.2-2.7,5.2-4,3.1-1.3,4.6,.9,10.7,1.4,5.8,.5,7.8-1.2,9.8,.6,1.8,1.6,2.3,4.8,1.2,6.7-1.3,2.1-4.3,2.2-4.3,2.8,.1,.9,7-.6,8.8,2.2,1.3,2-1,4.8,.8,7.6,.5,.8,.9,1,1.9,1.8,.6,.5,7.2,5.8,6.3,8.6-.7,2.2-5.5,1.1-6.5,3.6-.6,1.4,.7,3.6,3.3,7.9,2.5,4.2,3.6,5.1,3.3,6.8-.4,2.5-3.3,3.3-3,4.7,.4,1.6,4.3,.8,5.8,3.1,1.2,1.8-.4,3.4-.6,7.1-.4,5.7,3,6.8,3.1,12.7,0,1.7-.7,4.2-2.2,9-1.6,5.1-2.4,7.9-3.9,11.8-5.6,14.4-9.4,16.5-8.2,22.2,.7,3.4,2.1,2.9,3.6,7.8,2.2,7.1,1.5,15.1-.7,15.6-2.3,.6-5-7.7-7.1-7.2-2.6,.6-4.3,14.3,2.1,24.7,4.2,6.8,8.2,6.1,11.4,13,4.2,8.9,.6,16.5,3.3,17.5,2.6,.9,7.6-5.5,10-11,1.3-3.1,3.8-8.9,1.8-14.7-3.2-8.7-13.8-8.4-14.6-15-.5-3.9,2.7-8.4,6.9-9.8,4.3-1.5,9.4,.3,11.5,3.5,3.1,4.7-1.5,9.8,1.8,14.1,2,2.5,6,3.7,7.7,2.5,2.7-2-1.3-9,1.2-10.9,2-1.4,7.2,.7,9,4.5,1.7,3.4,.2,7-1,9.9-1.6,3.8-3.5,5.8-6.5,9.3-4.4,5.2-2.9,4.3-9.1,12.2-9.7,12.4-11.3,12-12.4,16.2-1.8,7.1,1.2,13.7,2.5,16.5,2.5,5.5,4.8,6.2,11.3,13.7,1.3,1.5,9.1,10.6,15.6,22.9,3.2,6.1,2.6,6.2,7.5,15.8,4.9,9.5,7.5,13.2,11.5,16.3,3.8,2.9,9.8,6,11.9,4.1,.8-.7,.7-2,.5-4.6-.5-7.2-3.3-10.3-1.7-12.5,.4-.5,.5-.3,4.1-1.8,4.6-2,5.6-2.9,6.4-2.4,1.1,.7-.2,3,.2,6.7,.4,3.8,2.1,4.7,3.5,8.3,1.9,5.1,2,12.6-1,14.4-3.4,2.1-9.5-3.8-11.3-2.1-.5,.5-.4,1.4,2.2,7.8,3.1,7.9,3.1,6.8,3.9,9.5,1.4,4.6,1.3,7,3.4,8.3,.9,.5,2.4,1,3.5,.3,2-1.2,.5-5.4,1.9-6,1.5-.7,6.3,3.2,5.6,6.2-.6,2.7-5.2,3.9-8.1,3.9-11,.2-19.1-15.3-19.2-15.2-.1,.1,17.4,26.2,24.7,23,3.3-1.5,2.7-8.1,6.5-8.9,2.7-.6,5.4,2.2,7.4,4.2,5.1,5.2,7,11.1,7.6,13,3.9,12.9-.8,16.1,2.8,26.8,2.1,6.2,3.3,4.2,8.4,15.1,4.3,9.2,5.1,14.4,8.4,14.9,3.6,.6,4.7-5.2,10.2-5.9,3.4-.5,3.8,1.6,14.8,7.1,6.5,3.3,8.5,3.6,10.4,6.4,2.2,3.2,1.2,5.2,3.6,7.2,3,2.5,6,.7,8.6,3.4,1.7,1.7,.7,2.7,2.4,5.9,2.5,4.6,5.3,4,6.8,7.9,1.4,3.5-.5,5,1.4,7.8,1.3,1.9,2.5,1.7,5,4.2,.8,.7,1.5,1.5,4.2,5.7,5.5,8.6,5.3,9.5,5,10-1,1.7-4.4-.2-6.3,1.8-2.1,2.3-.3,7.4,.1,8.5,1.3,3.8,3.2,4.5,3.3,7.6,.1,2.5-1.2,3.1-.7,4.5,1.2,3,8.1,2.9,12.2,2.8,5.8-.1,8.8-.1,12-2.1,3.8-2.4,5-5.8,7.7-5.4,2.1,.3,2.8,2.4,4.7,2.1s2-2.5,3.6-2.7c2.6-.4,4.2,5.1,6.6,4.8,1.6-.2,1.3-2.6,4-5.2,1.3-1.3,3.5-2.1,7.8-3.7,3-1.1,4.5-1.7,6.5-2.1,3.5-.7,6.1-1.2,8.5,0,1.4,.7,2.3,2.1,4.2,4.8,3.4,5,3.5,6.9,4.9,7.2,2.7,.4,5.8-5.6,7-7.9,2.5-4.8,2.9-8.1,4-11.5,3.5-11.8,10.5-17.6,9.7-18.3-.9-.7-9.1,4.7-13.8,14-3.4,6.7-3.6,12.5-5.1,12.4-1.4-.1-2.4-4.5-2.5-7.8,0-1.3-.1-5.6,2.7-9.1,3-3.9,6.7-3.7,7-6.2,.2-1.9-1.9-2.3-3.6-5.8-1.6-3.2-2.6-8.2-.5-11.8,1.7-2.8,4.3-2.8,4.5-4.8,.2-2.8-4.3-4.2-4-6.6,.3-2,3.4-1.6,5.2-4.3,2.5-3.7-1.2-7.5,1.2-10.6,2-2.5,6.8-2.9,9.9-1.7,2.1,.8,2.5,1.9,3.2,1.8,3.3-.6,2-22.5,1.5-31.8-.9-19.9-.2-34.7,.8-56.1,1.4-29.4,4.1-33.6,1.2-48.4-2.3-12-6.4-20.9-10.6-30.1-9.4-20.7-14.3-21.4-23.9-42.3-6.4-14-4.6-14.4-12.2-30.2-2.8-5.8-6.8-13.2-14.7-28-9.3-17.4-9-16.4-10.4-19.4-5.1-11.4-13.7-30.7-6.2-40.4,2.6-3.3,5.5-3.4,6.5-6.9,2-6.6-5.6-14.4-8.2-17-13-13.5-21.4-30.8-33.1-45.4,0,0-32.4-40.6-49.9-99-.2-.7-1.8-5.9-4.1-12.9-1.9-5.8-3.4-9.9-3.9-11.2-4.1-11.5-9.1-29.9-12.2-48.6-1.8-10.6-2.7-15.9-2.8-17.4-.5-6.7-1-19.9-4.1-20.4-.7-.1-1.9,.4-3.3-.3-1-.5-.9-1-1.8-1.4-1.9-.8-4.2,.5-4.5,.7-1.5,.8-1.8,1.8-2.7,1.6-.6-.1-.7-.6-1.4-1.2-1.4-1.3-3.8-2-5.6-1.4-1.4,.4-1.8,1.4-2.5,1.2-1-.3-.4-2.2-1.4-2.8-1.4-.9-3.7,2-6.2,1.2-1.1-.4-.8-1-2.6-2.4-2.4-1.9-4.9-2.3-5.7-2.4-1.3-.2-1.1,.1-3.8,0-3.1-.1-4.6-.2-5.7-1-1.8-1.3-2.2-3.6-2.7-3.4-.3,.1,.1,1.2-.5,1.6-.8,.5-2.5-1.7-4.2-1.2-.8,.2-1.3,1-1.5,1.3-1.2,2,.2,4.3-.6,4.8-.6,.3-1.4-1-3.2-1-.9,0-2.1,.3-2.3,1-.2,.9,1.7,1.6,1.5,2.6s-2.2,.7-2.9,1.9c-.7,1.3,.8,2.6,.7,5.1,0,2-1,2.3-1.3,4-1,4.8,5.9,7.5,5.5,13.3-.1,1.9-.9,1.9-1.1,4.7-.3,3.4,.8,3.9,.6,6.7-.3,4.1-2.9,4.5-2.5,7.7,.3,2.2,1.8,3.7,1,5.3-.3,.6-.8,1-1.3,1.3-1.3,.9-3.3,1.2-4.7,.5-.8-.4-.6-.7-1.2-.9-2.1-1-4.3,2.2-6.9,1.6-1-.3-1.6-1-2.6-2.3-.4-.6-2-2.6-2.2-5.7-.3-3.9,1.8-5.3,.6-7.5-.6-1-1-.7-2.6-2.6-1.7-2.1-1.9-3.3-1.9-3.7s-.1-1.5,.5-2.5c.8-1.2,2-1.2,1.9-1.5-.1-.8-10.7-.4-21.8-.5h-4.4c-4.7,0-8.4-.1-13.2-.2-4.9-.1-7.3-.2-11.3-.2-16.9-.4-44.8-.8-47.7-.9,0,0-14.3-.2-18.4-.5-.3,0-1.6-.1-3.5-.1h-1.8c-4.9,0-27-.6-27-.6-1.6,0,.2,0-14.1-.3-14.5-.4-19.6-.5-28.1-.7-2,0-2.7,0-8.2-.2-9.2-.2-20.6-.4-21.2-.5-5.9-.1-7.5-.2-10.4-.2h-10.1c-5.8,0-9.9-.2-18-.5,0,0-18.8-.8-23.4-.5h-.1c-1.5-.1-1.7-4.2-3.7-4.8-.6-.2-.7,.2-1.3,0-2.1-.5-3.7-4.7-3-8.3,.3-1.8,1-1.9,1-3.5,0-1.3-.6-2.6-1.8-5.2-1.3-2.7-2-4.1-3.1-4.8-.6-.3-1.1-.4-1.4-1-.6-1.1,.8-2.3,.2-3.3-.5-.9-1.9-.5-2.6-1.4-.6-.8-.4-2.1,.1-3.3l-32.7,.8-134.5,3.6-108.3-.5,.1,6.7-3.8,10,9.4,10.5,2,6.7c.7,0,9.1,.1,12.6,6.3,1.6,2.7,1.5,5.5,1.5,5.9-.2,5.9-5.3,7-5.6,12.3-.2,3.5,1.8,7.2,4.3,9.2,2.8,2.1,5.9,2,5.9,2.9,0,1.1-5.3,.5-8.1,3.9-1.8,2.2-.7,3.8-2.5,5.4-2.8,2.7-7.7,.5-8.4,2-.4,.8,.4,.1,7.1,5.4" style="fill:#bcbddc;"/>
@@ -1320,211 +1365,223 @@
                         </g>
                     </g>
                     <g id="symbol">
-                        <g style="opacity:.95;">
-                            <g id="id_01-svg">
-                                <path id="id_01" d="M443.13,563.73l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_02-svg">
-                                <path id="id_02" d="M432.93,564.73l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_03-svg">
-                                <path id="id_03" d="M651.43,651.93l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_04-svg">
-                                <path id="id_04" d="M651.33,653.52l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_05-svg">
-                                <path id="id_05" d="M725.83,571.93l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_06-svg">
-                                <path id="id_06" d="M725.93,570.32l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_07-svg">
-                                <path id="id_07" d="M726.23,570.93l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_08-svg">
-                                <path id="id_08" d="M723.83,574.43l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_09-svg">
-                                <path id="id_09" d="M780.33,777.93l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_10-svg">
-                                <path id="id_10" d="M762.03,815.82l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_11-svg">
-                                <path id="id_11" d="M704.63,858.73l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_12-svg">
-                                <path id="id_12" d="M764.33,771.73l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_13-svg">
-                                <path id="id_13" d="M652.43,850.02l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_14-svg">
-                                <path id="id_14" d="M645.53,866.93l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_15-svg">
-                                <path id="id_15" d="M648.83,848.73l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_16-svg">
-                                <path id="id_16" d="M651.63,851.12l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_17-svg">
-                                <path id="id_17" d="M650.23,861.32l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_18-svg">
-                                <path id="id_18" d="M656.33,856.73l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_19-svg">
-                                <path id="id_19" d="M614.93,869.02l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_20-svg">
-                                <path id="id_20" d="M618.33,857.02l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_21-svg">
-                                <path id="id_21" d="M625.63,889.32l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_22-svg">
-                                <path id="id_22" d="M621.23,885.62l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_23-svg">
-                                <path id="id_23" d="M630.63,889.23l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_24-svg">
-                                <path id="id_24" d="M645.93,945.52l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_25-svg">
-                                <path id="id_25" d="M644.43,941.43l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_26-svg">
-                                <path id="id_26" d="M921.83,1064.12l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_27-svg">
-                                <path id="id_27" d="M924.13,1065.62l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_28-svg">
-                                <path id="id_28" d="M918.43,1088.02l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_29-svg">
-                                <path id="id_29" d="M915.23,1091.62l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_30-svg">
-                                <path id="id_30" d="M910.93,1088.62l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_31-svg">
-                                <path id="id_31" d="M914.43,1074.93l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_32-svg">
-                                <path id="id_32" d="M908.13,1063.33l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_33-svg">
-                                <path id="id_33" d="M893.33,932.12l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_34-svg">
-                                <path id="id_34" d="M909.03,1106.52l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_35-svg">
-                                <path id="id_35" d="M910.63,1109.22l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_36-svg">
-                                <path id="id_36" d="M910.53,1110.93l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_37-svg">
-                                <path id="id_37" d="M903.13,1097.93l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_38-svg">
-                                <path id="id_38" d="M903.93,1105.62l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_39-svg">
-                                <path id="id_39" d="M906.23,1121.43l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_40-svg">
-                                <path id="id_40" d="M907.23,1128.52l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_41-svg">
-                                <path id="id_41" d="M916.13,1099.22l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_42-svg">
-                                <path id="id_42" d="M916.83,1120.33l15.3,.6-.6,15.7-15.2-.6,.5-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_43-svg">
-                                <path id="id_43" d="M898.63,1129.83l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_44-svg">
-                                <path id="id_44" d="M913.43,1122.43l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_45-svg">
-                                <path id="id_45" d="M914.03,1118.83l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_46-svg">
-                                <path id="id_46" d="M917.03,1098.52l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_47-svg">
-                                <path id="id_47" d="M921.23,1098.02l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_48-svg">
-                                <path id="id_48" d="M921.13,1097.72l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_49-svg">
-                                <path id="id_49" d="M916.13,1043.83l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_50-svg">
-                                <path id="id_50" d="M923.23,1003.32l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_51-svg">
-                                <path id="id_51" d="M920.33,995.43l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_52-svg">
-                                <path id="id_52" d="M887.63,913.43l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_53-svg">
-                                <path id="id_53" d="M727.03,1034.93l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
-                            <g id="id_54-svg">
-                                <path id="id_54" d="M902.93,1127.43l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
-                            </g>
+                        <g id="id_01-svg">
+                            <path d="M441.53,572.12c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_1-svg">
-                            <path id="_1" d="M651.93,174.22l15.3,.6-.6,15.7-15.3-.6,.6-15.7h0Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_02-svg">
+                            <path d="M431.33,573.12c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_2-svg">
-                            <path id="_2" d="M765.33,351.52l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_03-svg">
+                            <path d="M649.83,660.32c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_3-svg">
-                            <path id="_3" d="M360.23,311.63l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_04-svg">
+                            <path d="M649.73,661.93c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_4-svg">
-                            <path id="_4" d="M431.23,157.52l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_05-svg">
+                            <path d="M724.23,580.32c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_5-svg">
-                            <path id="_5" d="M416.03,169.72l15.3,.6-.6,15.7-15.3-.6,.6-15.7h0Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_06-svg">
+                            <path d="M724.33,578.73c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_6-svg">
-                            <path id="_6" d="M406.33,174.52l15.3,.6-.6,15.7-15.3-.6,.6-15.7h0Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_07-svg">
+                            <path d="M724.63,579.32c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_7-svg">
-                            <path id="_7" d="M417.93,154.52l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_08-svg">
+                            <path d="M722.23,582.82c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_8-svg">
-                            <path id="_8" d="M450.13,125.43l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_09-svg">
+                            <path d="M778.73,786.32c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_9-svg">
-                            <path id="_9" d="M415.83,146.42l15.3,.6-.6,15.7-15.3-.6,.6-15.7h0Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_10-svg">
+                            <path d="M760.43,824.23c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_10-svg">
-                            <path id="_10" d="M415.83,146.42l15.3,.6-.6,15.7-15.3-.6,.6-15.7h0Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_11-svg">
+                            <path d="M703.03,867.12c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_11-svg">
-                            <path id="_11" d="M420.03,142.72l15.3,.6-.6,15.7-15.3-.6,.6-15.7h0Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_12-svg">
+                            <path d="M762.73,780.12c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_12-svg">
-                            <path id="_12" d="M413.03,147.02l15.3,.6-.6,15.7-15.3-.6,.6-15.7h0Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_13-svg">
+                            <path d="M650.83,858.43c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_13-svg">
-                            <path id="_13" d="M414.23,137.92l15.3,.6-.6,15.7-15.3-.6,.6-15.7Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_14-svg">
+                            <path d="M643.93,875.32c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
-                        <g id="_14-svg">
-                            <path id="_14" d="M399.33,128.42l15.3,.6-.6,15.7-15.3-.6,.6-15.7h0Z" style="fill:#fec44f; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        <g id="id_15-svg">
+                            <path d="M647.23,857.12c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_16-svg">
+                            <path d="M650.03,859.52c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.5c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.5Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_17-svg">
+                            <path d="M648.63,869.73c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_18-svg">
+                            <path d="M654.73,865.12c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_19-svg">
+                            <path d="M613.33,877.43c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_20-svg">
+                            <path d="M616.73,865.43c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_21-svg">
+                            <path d="M624.03,897.73c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_22-svg">
+                            <path d="M619.63,894.02c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_23-svg">
+                            <path d="M629.03,897.62c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_24-svg">
+                            <path d="M644.33,953.93c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_25-svg">
+                            <path d="M642.83,949.82c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_26-svg">
+                            <path d="M920.23,1072.52c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_27-svg">
+                            <path d="M922.53,1074.02c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_28-svg">
+                            <path d="M916.83,1096.43c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_29-svg">
+                            <path d="M913.63,1100.02c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_30-svg">
+                            <path d="M909.33,1097.02c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_31-svg">
+                            <path d="M912.83,1083.33c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_32-svg">
+                            <path d="M906.53,1071.72c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_33-svg">
+                            <path d="M891.73,940.52c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.5c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.5Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_34-svg">
+                            <path d="M907.43,1114.93c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_35-svg">
+                            <path d="M909.03,1117.62c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_36-svg">
+                            <path d="M908.93,1119.33c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_37-svg">
+                            <path d="M901.53,1106.33c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_38-svg">
+                            <path d="M902.33,1114.02c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_39-svg">
+                            <path d="M904.63,1129.83c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_40-svg">
+                            <path d="M905.63,1136.93c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_41-svg">
+                            <path d="M914.53,1107.62c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_42-svg">
+                            <path d="M915.33,1128.72c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.5c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.5Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_43-svg">
+                            <path d="M897.03,1138.22c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_44-svg">
+                            <path d="M911.83,1130.83c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_45-svg">
+                            <path d="M912.43,1127.22c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_46-svg">
+                            <path d="M915.43,1106.93c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_47-svg">
+                            <path d="M919.63,1106.43c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_48-svg">
+                            <path d="M919.53,1106.12c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_49-svg">
+                            <path d="M914.53,1052.22c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_50-svg">
+                            <path d="M921.63,1011.73c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_51-svg">
+                            <path d="M918.73,1003.82c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_52-svg">
+                            <path d="M886.03,921.82c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_53-svg">
+                            <path d="M725.43,1043.33c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="id_54-svg">
+                            <path d="M901.33,1135.83c0,4.9,4,8.9,8.9,8.9s8.9-4,8.9-8.9v-.4c0-4.9-4-8.9-8.9-8.9s-8.9,4-8.9,8.9v.4Z" style="fill:#6a51a3; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_1">
+                            <path d="M651.03,182.63c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M651.03,182.63c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_2">
+                            <path d="M764.43,359.92c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M764.43,359.92c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_3">
+                            <path d="M359.33,320.02c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M359.33,320.02c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_4">
+                            <path d="M430.33,165.92c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M430.33,165.92c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_5">
+                            <path d="M415.13,178.13c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M415.13,178.13c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_6">
+                            <path d="M405.43,182.92c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M405.43,182.92c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_7">
+                            <path d="M417.03,162.92c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M417.03,162.92c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_8">
+                            <path d="M449.23,133.83c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M449.23,133.83c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_9">
+                            <path d="M414.93,154.83c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M414.93,154.83c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_10">
+                            <path d="M414.93,154.83c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M414.93,154.83c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_11">
+                            <path d="M419.13,151.13c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M419.13,151.13c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_12">
+                            <path d="M412.13,155.42c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M412.13,155.42c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_13">
+                            <path d="M413.33,146.22c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M413.33,146.22c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
+                        </g>
+                        <g id="_14">
+                            <path d="M398.43,136.83c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:#fec44f;"/>
+                            <path d="M398.43,136.83c0,4.6,3.7,8.3,8.3,8.3s8.3-3.7,8.3-8.3v-.4c0-4.6-3.7-8.3-8.3-8.3s-8.3,3.7-8.3,8.3v.4Z" style="fill:none; stroke:#000; stroke-miterlimit:10; stroke-width:.45px;"/>
                         </g>
                     </g>
                     <g id="caption">
@@ -1551,9 +1608,9 @@
                             <tspan x="100.32" y="0">A</tspan>
                         </text>
                     </g>
-                    <g id="major_cities" style="opacity:0.5;">
+                    <g id="major_cities" style="opacity:.4;">
                         <rect x="625.83" y="202.83" width="81" height="19.8" style="fill:none;"/>
-                        <text transform="translate(615.67 218.72)" style="fill:#7c7c7c; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
+                        <text transform="translate(615.67 218.73)" style="fill:#7c7c7c; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
                             <tspan x="0" y="0">Augu</tspan>
                             <tspan x="58.8" y="0" style="letter-spacing:-.01em;">s</tspan>
                             <tspan x="69.44" y="0" style="letter-spacing:-.01em;">t</tspan>
@@ -1567,23 +1624,23 @@
                             <tspan x="59.16" y="0" style="letter-spacing:-.01em;">t</tspan>
                             <tspan x="68.2" y="0">a</tspan>
                         </text>
-                        <rect x="365.08" y="277.78" width="123.15" height="24.95" style="fill:none;"/>
+                        <rect x="365.13" y="277.82" width="123.2" height="24.9" style="fill:none;"/>
                         <text transform="translate(364.68 293.33)" style="fill:#7c7c7c; font-family:Calibri, Calibri; font-size:25px; isolation:isolate;">
                             <tspan x="0" y="0">Columbus</tspan>
                         </text>
-                        <rect x="653.75" y="370.43" width="115.85" height="24.4" style="fill:none;"/>
+                        <rect x="653.73" y="370.42" width="115.9" height="24.4" style="fill:none;"/>
                         <text transform="translate(655.2 389.93)" style="fill:#7c7c7c; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
                             <tspan x="0" y="0">S</tspan>
                             <tspan x="12.87" y="0" style="letter-spacing:-.02em;">a</tspan>
                             <tspan x="25.81" y="0" style="letter-spacing:-.01em;">v</tspan>
                             <tspan x="38.05" y="0">annah</tspan>
                         </text>
-                        <rect x="669.02" y="878.12" width="81.39" height="27.4" style="fill:none;"/>
+                        <rect x="669.03" y="878.12" width="81.4" height="27.4" style="fill:none;"/>
                         <text transform="translate(671.62 898.8)" style="fill:#7c7c7c; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
                             <tspan x="0" y="0" style="letter-spacing:-.08em;">T</tspan>
                             <tspan x="11.46" y="0">ampa</tspan>
                         </text>
-                        <rect x="726.23" y="738.02" width="101.59" height="26.4" style="fill:none;"/>
+                        <rect x="726.23" y="738.02" width="101.6" height="26.4" style="fill:none;"/>
                         <text transform="translate(732.33 761.03)" style="fill:#7c7c7c; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
                             <tspan x="0" y="0">Orlando</tspan>
                         </text>
@@ -1596,7 +1653,7 @@
                             <tspan x="102.92" y="0" style="letter-spacing:-.02em;">r</tspan>
                             <tspan x="112.21" y="0">s</tspan>
                         </text>
-                        <rect x="617.79" y="599.63" width="146.27" height="30" style="fill:none;"/>
+                        <rect x="617.83" y="599.62" width="146.3" height="30" style="fill:none;"/>
                         <text transform="translate(626.75 620.53)" style="fill:#7c7c7c; font-family:Calibri, Calibri; font-size:28px; isolation:isolate;">
                             <tspan x="0" y="0">Jac</tspan>
                             <tspan x="34.18" y="0" style="letter-spacing:0em;">k</tspan>
@@ -1623,7 +1680,7 @@
                 </svg>
             </div>
             <p class="writing">
-                <b>However, of all 67 counties in Florida, only 15 of them have accessibility to abortion services</b>, which has left most northern and central parts of the state as a wasteland of women's reproductive rights. 
+                <b>However, of all 67 counties in Florida, only 15 of them have access to abortion services</b>, which has left most northern and central parts of the state as a wasteland of women's reproductive rights. 
             </p>
             <br>
             <br>
@@ -1644,7 +1701,7 @@
                     </div>
                     <div class="swiper-slide" id="slider-1">
                         <p class="scrollingText">
-                            However, abortions become harder to obtain deeper in Northwestern Florida. There are two facilities in central <span>Tallahassee</span> in <span>Leon</span>, making it the abortion-providing county geographically closest to the tristate area of Florida, Georgia, and Alabama. The local abortion business may become overwhelmed not only with patients from its nearby counties but from the neighboring states.
+                            However, abortions become harder to obtain deeper in Northwestern Florida. There are two facilities in central <span>Tallahassee</span> in <span>Leon</span>, making it the abortion-providing county geographically closest to the border with Georgia and Alabama. The local abortion business may become overwhelmed not only with patients from its nearby counties but from the neighboring states.
                         </p>
                     </div>
                     <div class="swiper-slide" id="slider-2">
@@ -1666,7 +1723,7 @@
                     </div>
                     <div class="swiper-slide" id="slider-5">
                         <p class="scrollingText">
-                            As the most populous county in Florida, Miami-Dade</span> with the largest number of <span>16 facilities</span> becomes the most 'abortion-friendly' region in the state, followed by <span>seven</span> in <span>Broward</span>, the second most populous county in Florida and <span>three</span> in <span>Palm Beach</span> where more than 1.5 million people reside in the place <a href="#footnote02" id="footnotes-ref-02">[2]</a>.
+                            As the most populous county in Florida, <span>Miami-Dade</span> is the most 'abortion-friendly' region in the state with <span>16</span> facilities, followed by <span>seven</span> in <span>Broward</span>, the second most populous county in Florida and <span>three</span> in <span>Palm Beach</span><a href="#footnote02" id="footnotes-ref-02">[2]</a>.
                         </p>
                     </div>
                 </div>
@@ -1749,6 +1806,8 @@
                     map.flyTo(place);     
         
                 });
+
+                swiper.keyboard.enable()// Enabling keyboard control ( ← → arrows) to navigate slides, instead of clicking the arrows
         
                 // Initialize Map
                 mapboxgl.accessToken =
@@ -1772,6 +1831,7 @@
                 const map = new mapboxgl.Map(option);
         
                 map.scrollZoom.disable(); //disable mapbox built-in zoomable function
+                map.addControl(new mapboxgl.NavigationControl())
         
         
                 </script>  
@@ -1798,10 +1858,10 @@
             <br>
             <br>
             <p class="writing">
-                Florida presents a less desperate situation than other Southern states. However, geographic accessibility doesn't bring along a panacea for all concerns about abortion. Anxiety about secure abortion protection, along with the financial struggles experienced by patients traveling further to seek abortion care, are awaiting all women.
+                Florida presents a less desperate situation than other Southern states. However, geographic accessibility doesn't bring along a panacea for all concerns about abortion. Anxiety about secure abortion protection, along with the financial struggles experienced by patients traveling farther to seek abortion care, are awaiting all women.
             </p>
             <p class="writing">
-                In Florida, if a woman wishes for an abortion, she must receive in-person state-directed counseling that includes information designed to discourage her from the procedure and then undergo a 24-hour waiting period before having an abortion. <b>This means that the law requires at least two trips to the facility</b>, which might incur extra transportation and lodging expenses for long-distance travel on patients.
+                In Florida, if a woman opts for an abortion, she must receive in-person state-directed counseling that includes information designed to discourage her from the procedure and then undergo a 24-hour waiting period before having an abortion. <b>This means that the law requires at least two trips to the facility</b>, which might incur extra transportation and lodging expenses for long-distance travel on patients.
             </p>
         </section>
         <section id="section-2">
@@ -1920,12 +1980,15 @@
                         <tspan x="106.86" y="110.27" style="letter-spacing:0em;">t</tspan>
                         <tspan x="122.34" y="110.27">ober 2022</tspan>
                     </text>
+                    <g id="topLayer"></g> <!-- create an empty <g> element on the first (top) layer in SVG -->
                 </svg>
                 <script>
 
                     let distanceToNearest = []
                     //let file04 = 'distanceToNearest.json' (read from local computer)
                     let file04 = "https://raw.githubusercontent.com/luyi-eve/fl-abortion-costs/main/data/distanceToNearest.json"
+
+                    let topLayer = document.querySelector('#topLayer')
 
                     fetch(file04) 
                         .then(response => response.json())
@@ -1936,7 +1999,15 @@
 
                     function showTooltip04(event, text) {
 
-                        let template04 = 'No data' 
+                        let template04 = 'No data'
+
+                        /* H */
+                        let clone = event.target.cloneNode() 
+                        // every time we hover on a county, clone the county 
+                        clone.classList.add('topLayerBorder') //clone.style.stroke = "#342a4e"
+                        // style the cloned county with colored border (by adding a personalized class to each cloned county <path>)
+                        topLayer.append(clone)
+                        // and paste the styled county to the empty <g> element
 
                         for(let distance of distanceToNearest){
                            //console.log(event.target)
@@ -1970,6 +2041,8 @@
                         var tooltip04 = document.getElementById("tooltip04");
                         tooltip04.style.display = "none";
 
+                        topLayer.innerHTML = ''; 
+                        // clear the styled county when mouseout (not hovering)
                     }
 
                     for (let path of paths) {
@@ -1990,7 +2063,7 @@
             <p class="writing">
                 Possible gas fees and extra lodging costs should be taken into account if patients do not wish to return and make the same 4-hour trip in the 24 hours between the first counseling and the actual procedure as mandated by Florida's law.
             </p>
-            <div id="graphic05" class="graphic" style="max-width: 32rem;">
+            <div id="graphic05" class="graphic" style="max-width: 32rem; padding-bottom: 0;">
                 <div id="tooltip05" style="position: absolute; display: none;"></div>
                 <svg id="top_10_gas_price"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1110.25 1026.4">
@@ -2267,6 +2340,11 @@
                         <tspan x="800.57" y="0">vider (mile)</tspan>
                     </text>
                 </svg>
+
+                <p class="starnotes">
+                    *The gas prices were calculated based on the average regular gas price released by The AAA Gas Prices in late October 2022.
+                </p>   
+
                 <!-- tooltip05: gas prices -->
                 <script>
                     let top10GasPrices = []
@@ -2322,7 +2400,7 @@
                     }
 
                 </script>           
-            </div>      
+            </div>   
             <p class="writing">
                 This long distance travel from Escambia to Tallahassee takes an estimated six to eight hours' drive for a round trip, costing roughly $50 in gas.                
             </p>
@@ -2330,7 +2408,7 @@
                 Patients traveling from Northern counties such as Santa Rosa, Okaloosa and Walton have to pay more for gasoline supply than those further South because of the longer distances. In Central Florida, accessible facilities are also limited since patients there rely heavily on the abortion business at Pinellas and Hillsborough where there are more choices of facilities which, however, may not always be the closest ones to where patients live.
             </p>
             <p class="writing">
-                In addition, to plan the logistics of such a trip, occasionally patients will require a hotel near the facility. For instance, if a woman travels from Escambia to its nearest facility in Leon, the median hotel cost she has to pay is $99 per night. However, the hotel price varies greatly depending on multiple factors including the county's population, whether the facilities are located in the downtown areas, and during which seasons to go, peak or low will also contribute to a wide range of costs on lodging.
+                In addition, to plan the logistics of such a trip, occasionally patients will require a hotel near the facility. For instance, if a woman travels from Escambia to its nearest facility in Leon, the median hotel cost she has to pay is $99 per night. However, the hotel price varies greatly depending on multiple factors including the county's population, whether the facilities are located in the downtown areas, and seasonality —peak or low— will also contribute to a wide range of costs on lodging.
             </p>
             <p class="writing">                
                 Here are the calculated hotel costs for each abortion facility in Florida. <b>Filter by the median lodging cost to see traveling to which facilities would make the patients pay for the hotels at a different price. Hover over a dot for more details.</b>
@@ -2717,9 +2795,18 @@
             
                     let item = document.createElement("p");
                     item.textContent = filteredRows.length + " out of 54" + " abortion providers' median hotel charges are"
-                        if(filteredRows.length == 0){
-                            list.display('none'); // it worked!!!
-                        }list.append(item);
+                        // if(filteredRows.length == 0){
+                        //     //list.display('none'); // it worked!!!
+                        // } else {
+                        //     list.append(item);
+                        
+                        // }
+
+                        if(filteredRows.length > 0){
+                            list.append(item);
+                            //list.display('none'); // it worked!!!
+                        }
+                        
             
             
                     /* filtered with map starts here */
@@ -2817,7 +2904,7 @@
             <p class="footnotes">
                 Note:
                 <br>
-                [1] The numbers released by Florida Agency for Health Care Administration (AHCA) are Year-to-Date. The cases for 2022 was last updated on Nov 1, 2022 when this story was published. Reports for prior years before 2017 shall be requested through AHCA's Public Records Office. The 2019 Report by AHCA is missing in which case the data of that year are compiled from Johnston's Archive.<a id="footnote01" href="#footnotes-ref-01">↵</a>
+                [1] The numbers released by Florida Agency for Health Care Administration (AHCA) are Year-to-Date. Reports for prior years before 2017 should be requested through AHCA's Public Records Office. The 2019 Report by AHCA is missing in which case the data of that year are compiled from Johnston's Archive.<a id="footnote01" href="#footnotes-ref-01">↵</a>
                 <br>
                 [2] As of 2022, Miami-Dade County remains the most populous county with 2,757,592 residents, followed by Broward County (1,969,099), Hillsborough County (1,520,529), Palm Beach County (1,518,152), and Orange County (1,481,321), based on the statstics released by The Office of Economic and Demographic Research (EDR). <a id="footnote02" href="#footnotes-ref-02">↵</a>
                 <br>
@@ -2860,7 +2947,7 @@
             </p>
             <p class="closing">
                 <b><span>Gas prices to the nearest facility</span></b>
-                Data in this section are calculated based on the Florida average regular gas price updated and published by <a href="https://gasprices.aaa.com/?state=FL">The AAA Gas Prices website</a>. However, given the fact that the gas price slightly fluctuates on a daily basis, I rounded the regular gas price to $3.3 per gallon after observing the current, yesterday, weekly, monthly, and yearly average regular price whose number in tenth place stably remains at three in late October 2022 when this story was published.
+                Data in this section are calculated based on the Florida average regular gas price updated and published by <a href="https://gasprices.aaa.com/?state=FL">The AAA Gas Prices</a>. However, given the fact that the gas price slightly fluctuates on a daily basis, I rounded the regular gas price to $3.3 per gallon after observing the current, yesterday, weekly, monthly, and yearly average regular price whose number in tenth place stably remains at three in late October 2022 when this story was published.
             </p>
             <p class="closing">
                 <b><span>Hotel cost for each facility</span></b>
