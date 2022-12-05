@@ -20,4 +20,4 @@ If you want to check the datasets that I built for this story and other sources 
 
 For this project, I learned multiple approaches to cross-check various sources when building regional datasets. I also practiced and taught myself to create interactive graphics and dynamic webpages by applying customized functions using JavaScript🤖. 
 
-Previously, I had only worked with Python, HTML/CSS and data visualization tools suchs as Adobe Illustrator, Mapbox, QGIS, Datawrapper/Flourish, and I had little experiences in interactive design🤠.
+Previously, I had only worked with Python, HTML/CSS and data visualization tools suchs as Adobe Illustrator, Mapbox, QGIS, Datawrapper, Flourish, and I had little experiences in interactive design🤠.
