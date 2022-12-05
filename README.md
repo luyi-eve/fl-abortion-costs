@@ -4,7 +4,7 @@
 
 ## Goals
 
-The overall goal of this project is to understand the potential financial predicament arose from the end of Roe that women may risk undergoing through a deep analysis of the nonmedical costs on transportation and lodging expenses for an abortion round trip in Florida. It also tries to deliver informative messages to people who need help with selection of abortion care in the particular region. 
+The overall goal of this project is to understand the potential financial predicament that arose from the end of Roe that women may risk undergoing through an analysis of the non-medical costs on transportation and lodging expenses for an abortion round trip in Florida. It also tries to deliver informative messages to people who need help with the selection of abortion care in the particular region. 
 
 You're welcome to visit [About This Project](https://luyi-eve.github.io/fl-abortion-costs/about-and-sources)✨ for more details.
 
