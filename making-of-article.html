@@ -64,6 +64,11 @@
             }
         }
 
+        /* when screen size < 640px (40em), then hide the pagination bullets */
+        .swiper-pagination-bullet.disabled {
+            display: none;
+        }
+
      </style>
 
      <!-- Section Container -->
@@ -1423,7 +1428,6 @@
                         el: '.swiper-pagination',
                         clickable: true,
                     },
-
                     // Navigation arrows
                     /*navigation: {
                         nextEl: '.swiper-button-next',
@@ -1438,17 +1442,24 @@
 
                     });
 
-                /*const swiper2 = new Swiper(".mySwiper2", {
-                    direction: "vertical",
-                    loop: true,
-                    spaceBetween: 50,
-                    mousewheel: true,
-                    
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                    },
-                });*/
+                
+                /* when turn to mobile version, hide pagination bullets (becasue the bullets will overlap the txt) */
+                function hidePagination() {
+                    let bullets = document.getElementsByClassName('swiper-pagination-bullet')
+                    //console.log(bullets)
+
+                    if (window.innerWidth < 640) {
+                        for(let bullet of bullets){
+                            bullet.classList.add('disabled'); 
+                            console.log(bullet)
+                        }
+                    } else {
+                        for(let bullet of bullets){
+                            console.log(bullet)
+                        }
+                    }
+                }
+                hidePagination()
 
             </script>
 
