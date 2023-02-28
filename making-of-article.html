@@ -82,13 +82,13 @@
             text-align: center;    
             
             /* 到swipe right之间的距离 - mobile size */
-            padding-top: 7rem;
+            padding-top: 6rem;
          }
 
          @media only screen and (min-width: 40em){
             div#infoTag {
                 max-width: 60rem !important;
-                padding-top: 10rem;
+                padding-top: 9rem;
             }
         }
 
@@ -101,12 +101,31 @@
 
      </style>
  
-    <!-- Navigation -->
-    <style>
+     <!-- Tab Navigation -->
+     <style>
+        div#navigation {
+            background-color: #3f3656;
+            padding-top:1.3rem;
+            position: sticky;
+            top: 0;
+        }
+
+        @media only screen and (min-width: 40em){
+            div#navigation {
+                padding-top:1.5rem;
+            }
+        }
+
         div#navigation li {
-            font-size: 19px;
-            font-family: "DM Serif Display";
+            font-size: 20px;
+            font-family: "Assistant";
             text-transform: uppercase;
+        }
+
+        @media only screen and (min-width: 40em){
+            div#navigation li {
+                font-size: 22px;
+            }
         }
 
         div#navigation li:hover{
@@ -135,7 +154,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: -1px;
-            padding: 1em 1em;
+            padding: 0.5em 1em;
             vertical-align: top;
         }
             
@@ -195,7 +214,7 @@
          /* h1 */
         h1 {
             max-width: 20rem;
-            padding-top: 10rem; /* 标题以上的距离*/
+            padding-top: 7rem; /* 标题以上的距离*/
             padding-bottom: 2rem; /* 标题以下的距离*/
 
             margin: 0 auto;
@@ -211,13 +230,20 @@
 
         @media only screen and (min-width: 40em){
             h1 {
-                padding-top: 14rem; /* 标题以上的距离*/
+                padding-top: 7rem; /* 标题以上的距离*/
 
                 max-width: 65rem;
                 font-weight: 400;
-                font-size: 63px;
+                font-size: 80px;
             }
         }
+
+        h1 span {
+            padding: 0 0.5rem;
+            background-color: #faf5ed;
+            color: #342a4e;
+        }
+
 
         /* h2 */
         h2 {
@@ -1072,6 +1098,13 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div id="slider-cover" class="swiper-slide">
+                        <div id="navigation" class="tabs is-centered">
+                            <ul>
+                            <li class="is-active"><a href="https://luyi-eve.github.io/fl-abortion-costs/">Back To Story</a></li>
+                            <li><a href="#about-this-project">About This Project</a></li>
+                            <li><a href="#datasets-and-sources">Datasets and Sources</a></li>
+                            </ul>
+                        </div>
                         <h1>A Journey of Pain</h1>
                         <h2>(A lot of...) Pain 💦 + Reflection 🤠 = Survival 😬</h2>
                         <h2>This is a making-of article that demonstrates the work behind the scenes for my data-driven project <a href="https://luyi-eve.github.io/fl-abortion-costs/"><i>Florida's Non-medical Abortion Costs</i></a></h2>
@@ -1462,8 +1495,6 @@
                 hidePagination()
 
             </script>
-
-
         </main>
     </body>
     
